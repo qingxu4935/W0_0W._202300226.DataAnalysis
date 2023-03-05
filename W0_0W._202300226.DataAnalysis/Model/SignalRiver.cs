@@ -32,7 +32,7 @@ namespace W0_0W._202300226.DataAnalysis.Model
 				}
 
 				var index = 0;
-				var rate = _config.Rate;
+				var rate = _config.Rate * 1000;
 				while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 				{
 					var value = binaryReader.ReadInt16();

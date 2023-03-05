@@ -19,9 +19,9 @@ namespace W0_0W._202300226.DataAnalysis
 
 		IniData Data => _data.Value;
 
-		public int Rate
+		public double Rate
 		{
-			get => int.Parse(Data[nameof(Config)][nameof(Rate)]);
+			get => double.Parse(Data[nameof(Config)][nameof(Rate)]);
 			set => Data[nameof(Config)][nameof(Rate)] = value.ToString();
 		}
 

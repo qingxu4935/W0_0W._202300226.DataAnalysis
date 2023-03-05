@@ -5,10 +5,16 @@ namespace W0_0W._202300226.DataAnalysis
 {
 	public partial class ParametersView : DevExpress.XtraEditors.XtraUserControl
 	{
+		readonly Config _config = Locator.Current.GetService<Config>();
+
 		public ParametersView()
 		{
 			InitializeComponent();
-			configBindingSource.Add(Locator.Current.GetService<Config>());
+		}
+
+		void ParametersView_Load(object sender, System.EventArgs e)
+		{
+			configBindingSource.Add(_config);
 		}
 
 		void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
@@ -16,10 +22,10 @@ namespace W0_0W._202300226.DataAnalysis
 			switch (((WindowsUIButton)e.Button).Caption)
 			{
 				case "保存":
-					Locator.Current.GetService<Config>().Save();
+					_config.Save();
 					break;
 				case "保存并关闭":
-					Locator.Current.GetService<Config>().Save();
+					_config.Save();
 					Visible = false;
 					break;
 			}
