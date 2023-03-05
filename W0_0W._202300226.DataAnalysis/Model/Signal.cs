@@ -1,6 +1,6 @@
-﻿namespace W0_0W._202300226.DataAnalysis
+﻿namespace W0_0W._202300226.DataAnalysis.Model
 {
-	class Signal
+	sealed class Signal
 	{
 		public Signal(double rate, int index, short value)
 		{

@@ -1,5 +1,7 @@
 ﻿using System.Windows.Forms;
+using DevExpress.XtraCharts;
 using Splat;
+using W0_0W._202300226.DataAnalysis.Model;
 
 namespace W0_0W._202300226.DataAnalysis
 {
@@ -18,10 +20,15 @@ namespace W0_0W._202300226.DataAnalysis
 				var signalRiver = new SignalRiver(Locator.Current.GetService<Config>());
 				signalRiver.Load(fileName);
 
-				var series = chartControl.Series[0];
+				var series = chart.Series[0];
 				series.DataSource = signalRiver.Signals;
 				series.ArgumentDataMember = nameof(Signal.Second);
 				series.ValueDataMembers[0] = nameof(Signal.Value);
+
+				var chartTitle = new ChartTitle();
+				chartTitle.Alignment = System.Drawing.StringAlignment.Near;
+				chartTitle.Text = $"峰值: {signalRiver.MaxValue}";
+				chart.Titles.Add(chartTitle);
 			}
 		}
 	}

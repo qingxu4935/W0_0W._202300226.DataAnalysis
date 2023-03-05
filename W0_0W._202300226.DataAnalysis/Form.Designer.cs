@@ -53,10 +53,10 @@
 			this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
 			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-			this.chartControl = new DevExpress.XtraCharts.ChartControl();
+			this.chart = new DevExpress.XtraCharts.ChartControl();
 			this.xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
@@ -253,7 +253,7 @@
 			this.barButtonItem2.Id = 5;
 			this.barButtonItem2.Name = "barButtonItem2";
 			// 
-			// chartControl
+			// chart
 			// 
 			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
 			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
@@ -269,16 +269,16 @@
 			xyDiagram1.EnableAxisXZooming = true;
 			xyDiagram1.EnableAxisYScrolling = true;
 			xyDiagram1.EnableAxisYZooming = true;
-			this.chartControl.Diagram = xyDiagram1;
-			this.chartControl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.chartControl.Location = new System.Drawing.Point(0, 42);
-			this.chartControl.Name = "chartControl";
-			series1.Name = "Series";
+			this.chart.Diagram = xyDiagram1;
+			this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chart.Location = new System.Drawing.Point(0, 42);
+			this.chart.Name = "chart";
+			series1.Name = "信号量";
 			series1.View = splineSeriesView1;
-			this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+			this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-			this.chartControl.Size = new System.Drawing.Size(826, 488);
-			this.chartControl.TabIndex = 4;
+			this.chart.Size = new System.Drawing.Size(826, 488);
+			this.chart.TabIndex = 4;
 			// 
 			// xtraOpenFileDialog
 			// 
@@ -290,7 +290,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(826, 550);
-			this.Controls.Add(this.chartControl);
+			this.Controls.Add(this.chart);
 			this.Controls.Add(this.barDockControlLeft);
 			this.Controls.Add(this.barDockControlRight);
 			this.Controls.Add(this.barDockControlBottom);
@@ -303,7 +303,7 @@
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chartControl)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -332,7 +332,7 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem8;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem9;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-		private DevExpress.XtraCharts.ChartControl chartControl;
+		private DevExpress.XtraCharts.ChartControl chart;
 		private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog;
 	}
 }

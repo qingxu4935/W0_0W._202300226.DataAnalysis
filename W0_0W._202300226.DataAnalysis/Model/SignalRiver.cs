@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Ardalis.GuardClauses;
 
-namespace W0_0W._202300226.DataAnalysis
+namespace W0_0W._202300226.DataAnalysis.Model
 {
-	class SignalRiver
+	sealed class SignalRiver
 	{
 		readonly Config _config;
 		readonly List<Signal> _signals = new List<Signal>();
@@ -16,6 +17,8 @@ namespace W0_0W._202300226.DataAnalysis
 
 		public IReadOnlyList<Signal> Signals => _signals.AsReadOnly();
 
+		public short MaxValue { get; private set; }
+
 		public void Load(string path)
 		{
 			Guard.Against.NullOrEmpty(path, nameof(path));
@@ -23,7 +26,7 @@ namespace W0_0W._202300226.DataAnalysis
 			using (var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read))
 			using (var binaryReader = new BinaryReader(fileStream))
 			{
-				for (var i = 1; i <= _config.ValidStart - 1; i++)
+				for (var i = 0; i <= _config.ValidStart; i++)
 				{
 					binaryReader.ReadByte();
 				}
@@ -32,7 +35,9 @@ namespace W0_0W._202300226.DataAnalysis
 				var rate = _config.Rate;
 				while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 				{
-					_signals.Add(new Signal(rate, index++, binaryReader.ReadInt16()));
+					var value = binaryReader.ReadInt16();
+					MaxValue = Math.Max(value, MaxValue);
+					_signals.Add(new Signal(rate, index++, value));
 				}
 			}
 		}

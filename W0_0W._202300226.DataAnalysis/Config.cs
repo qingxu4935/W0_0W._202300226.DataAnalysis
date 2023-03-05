@@ -24,11 +24,13 @@ namespace W0_0W._202300226.DataAnalysis
 			get => int.Parse(Data[nameof(Config)][nameof(Rate)]);
 			set => Data[nameof(Config)][nameof(Rate)] = value.ToString();
 		}
+
 		public int ValidStart
 		{
 			get => int.Parse(Data[nameof(Config)][nameof(ValidStart)]);
 			set => Data[nameof(Config)][nameof(ValidStart)] = value.ToString();
 		}
+
 		public int Sensitivity
 		{
 			get => int.Parse(Data[nameof(Config)][nameof(Sensitivity)]);
