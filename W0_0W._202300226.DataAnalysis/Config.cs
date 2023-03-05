@@ -19,6 +19,12 @@ namespace W0_0W._202300226.DataAnalysis
 
 		IniData Data => _data.Value;
 
+		public string DeviceName
+		{
+			get => Data[nameof(Config)][nameof(DeviceName)];
+			set => Data[nameof(Config)][nameof(DeviceName)] = value;
+		}
+
 		public double Rate
 		{
 			get => double.Parse(Data[nameof(Config)][nameof(Rate)]);

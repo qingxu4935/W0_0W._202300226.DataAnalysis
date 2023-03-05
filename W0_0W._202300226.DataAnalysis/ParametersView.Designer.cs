@@ -40,11 +40,13 @@
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.ItemForRate = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
 			this.ItemForSensitivity = new DevExpress.XtraLayout.LayoutControlItem();
 			this.ItemForValidStart = new DevExpress.XtraLayout.LayoutControlItem();
 			this.labelControl = new DevExpress.XtraEditors.LabelControl();
 			this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-			this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
+			this.DeviceNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
 			this.dataLayoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.RateTextEdit.Properties)).BeginInit();
@@ -54,9 +56,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForRate)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForSensitivity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForValidStart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.DeviceNameTextEdit.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataLayoutControl1
@@ -65,12 +69,13 @@
 			this.dataLayoutControl1.Controls.Add(this.RateTextEdit);
 			this.dataLayoutControl1.Controls.Add(this.ValidStartTextEdit);
 			this.dataLayoutControl1.Controls.Add(this.SensitivityTextEdit);
+			this.dataLayoutControl1.Controls.Add(this.DeviceNameTextEdit);
 			this.dataLayoutControl1.DataSource = this.configBindingSource;
 			this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataLayoutControl1.Location = new System.Drawing.Point(0, 30);
 			this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			this.dataLayoutControl1.Name = "dataLayoutControl1";
-			this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1267, 1371, 650, 400);
+			this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(751, 1398, 650, 400);
 			this.dataLayoutControl1.Root = this.layoutControlGroup1;
 			this.dataLayoutControl1.Size = new System.Drawing.Size(933, 551);
 			this.dataLayoutControl1.TabIndex = 0;
@@ -128,7 +133,8 @@
 			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.ItemForSensitivity,
-            this.ItemForValidStart});
+            this.ItemForValidStart,
+            this.layoutControlItem1});
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Size = new System.Drawing.Size(933, 551);
 			this.layoutControlGroup1.TextVisible = false;
@@ -153,12 +159,21 @@
 			this.ItemForRate.Text = "采样率";
 			this.ItemForRate.TextSize = new System.Drawing.Size(72, 14);
 			// 
+			// simpleLabelItem1
+			// 
+			this.simpleLabelItem1.AllowHotTrack = false;
+			this.simpleLabelItem1.Location = new System.Drawing.Point(787, 0);
+			this.simpleLabelItem1.Name = "simpleLabelItem1";
+			this.simpleLabelItem1.Size = new System.Drawing.Size(126, 24);
+			this.simpleLabelItem1.Text = "k/s";
+			this.simpleLabelItem1.TextSize = new System.Drawing.Size(72, 14);
+			// 
 			// ItemForSensitivity
 			// 
 			this.ItemForSensitivity.Control = this.SensitivityTextEdit;
 			this.ItemForSensitivity.Location = new System.Drawing.Point(0, 48);
 			this.ItemForSensitivity.Name = "ItemForSensitivity";
-			this.ItemForSensitivity.Size = new System.Drawing.Size(913, 483);
+			this.ItemForSensitivity.Size = new System.Drawing.Size(913, 24);
 			this.ItemForSensitivity.Text = "灵敏度";
 			this.ItemForSensitivity.TextSize = new System.Drawing.Size(72, 14);
 			// 
@@ -227,14 +242,24 @@
 			this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
 			this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
 			// 
-			// simpleLabelItem1
+			// DeviceNameTextEdit
 			// 
-			this.simpleLabelItem1.AllowHotTrack = false;
-			this.simpleLabelItem1.Location = new System.Drawing.Point(787, 0);
-			this.simpleLabelItem1.Name = "simpleLabelItem1";
-			this.simpleLabelItem1.Size = new System.Drawing.Size(126, 24);
-			this.simpleLabelItem1.Text = "k/s";
-			this.simpleLabelItem1.TextSize = new System.Drawing.Size(72, 14);
+			this.DeviceNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.configBindingSource, "DeviceName", true));
+			this.DeviceNameTextEdit.Location = new System.Drawing.Point(96, 84);
+			this.DeviceNameTextEdit.Name = "DeviceNameTextEdit";
+			this.DeviceNameTextEdit.Size = new System.Drawing.Size(825, 20);
+			this.DeviceNameTextEdit.StyleController = this.dataLayoutControl1;
+			this.DeviceNameTextEdit.TabIndex = 7;
+			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.DeviceNameTextEdit;
+			this.layoutControlItem1.CustomizationFormText = "设备号";
+			this.layoutControlItem1.Location = new System.Drawing.Point(0, 72);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.Size = new System.Drawing.Size(913, 459);
+			this.layoutControlItem1.Text = "设备号";
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(72, 14);
 			// 
 			// ParametersView
 			// 
@@ -259,9 +284,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForRate)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForSensitivity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemForValidStart)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.DeviceNameTextEdit.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -281,5 +308,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem ItemForValidStart;
 		private DevExpress.XtraLayout.LayoutControlItem ItemForSensitivity;
 		private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+		private DevExpress.XtraEditors.TextEdit DeviceNameTextEdit;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 	}
 }

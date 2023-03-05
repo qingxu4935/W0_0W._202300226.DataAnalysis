@@ -17,6 +17,8 @@ namespace W0_0W._202300226.DataAnalysis.Model
 
 		public IReadOnlyList<Signal> Signals => _signals.AsReadOnly();
 
+		public string DeviceName => _config.DeviceName;
+
 		public short MaxValue { get; private set; }
 
 		public void Load(string path)
