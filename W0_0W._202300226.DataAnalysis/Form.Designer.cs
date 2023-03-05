@@ -43,18 +43,19 @@
 			this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
 			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
 			this.barSubItemParameters = new DevExpress.XtraBars.BarSubItem();
-			this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
 			this.bar3 = new DevExpress.XtraBars.Bar();
 			this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
 			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
 			this.chart = new DevExpress.XtraCharts.ChartControl();
 			this.xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+			this.parametersView = new W0_0W._202300226.DataAnalysis.ParametersView();
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -171,29 +172,12 @@
 			this.barButtonItem6.Id = 9;
 			this.barButtonItem6.Name = "barButtonItem6";
 			// 
-			// barButtonItem7
-			// 
-			this.barButtonItem7.Caption = "计算峰值";
-			this.barButtonItem7.Id = 10;
-			this.barButtonItem7.Name = "barButtonItem7";
-			// 
 			// barSubItemParameters
 			// 
 			this.barSubItemParameters.Caption = "参数设置";
 			this.barSubItemParameters.Id = 3;
 			this.barSubItemParameters.Name = "barSubItemParameters";
-			// 
-			// barButtonItem8
-			// 
-			this.barButtonItem8.Caption = "采样频率";
-			this.barButtonItem8.Id = 11;
-			this.barButtonItem8.Name = "barButtonItem8";
-			// 
-			// barButtonItem9
-			// 
-			this.barButtonItem9.Caption = "灵敏度";
-			this.barButtonItem9.Id = 12;
-			this.barButtonItem9.Name = "barButtonItem9";
+			this.barSubItemParameters.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSubItemParameters_ItemClick);
 			// 
 			// bar3
 			// 
@@ -249,6 +233,24 @@
 			this.barButtonItem2.Id = 5;
 			this.barButtonItem2.Name = "barButtonItem2";
 			// 
+			// barButtonItem7
+			// 
+			this.barButtonItem7.Caption = "计算峰值";
+			this.barButtonItem7.Id = 10;
+			this.barButtonItem7.Name = "barButtonItem7";
+			// 
+			// barButtonItem8
+			// 
+			this.barButtonItem8.Caption = "采样频率";
+			this.barButtonItem8.Id = 11;
+			this.barButtonItem8.Name = "barButtonItem8";
+			// 
+			// barButtonItem9
+			// 
+			this.barButtonItem9.Caption = "灵敏度";
+			this.barButtonItem9.Id = 12;
+			this.barButtonItem9.Name = "barButtonItem9";
+			// 
 			// chart
 			// 
 			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
@@ -281,12 +283,25 @@
 			this.xtraOpenFileDialog.FileName = "xtraOpenFileDialog";
 			this.xtraOpenFileDialog.Filter = "数据文件(*.dat)|*.dat";
 			// 
+			// parametersView
+			// 
+			this.parametersView.Appearance.BackColor = System.Drawing.Color.White;
+			this.parametersView.Appearance.Options.UseBackColor = true;
+			this.parametersView.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+			this.parametersView.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.parametersView.Location = new System.Drawing.Point(0, 0);
+			this.parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			this.parametersView.Name = "parametersView";
+			this.parametersView.Size = new System.Drawing.Size(826, 550);
+			this.parametersView.TabIndex = 9;
+			// 
 			// Form
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(826, 550);
 			this.Controls.Add(this.chart);
+			this.Controls.Add(this.parametersView);
 			this.Controls.Add(this.barDockControlLeft);
 			this.Controls.Add(this.barDockControlRight);
 			this.Controls.Add(this.barDockControlBottom);
@@ -330,6 +345,7 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
 		private DevExpress.XtraCharts.ChartControl chart;
 		private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog;
+		private ParametersView parametersView;
 	}
 }
 

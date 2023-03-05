@@ -11,6 +11,8 @@ namespace W0_0W._202300226.DataAnalysis
 		[STAThread]
 		static void Main()
 		{
+			DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			App.Init();

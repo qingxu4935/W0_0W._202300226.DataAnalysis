@@ -31,5 +31,11 @@ namespace W0_0W._202300226.DataAnalysis
 				chart.Titles.Add(chartTitle);
 			}
 		}
+
+		void barSubItemParameters_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			parametersView.Visible = true;
+			parametersView.BringToFront();
+		}
 	}
 }
