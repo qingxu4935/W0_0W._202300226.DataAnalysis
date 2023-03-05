@@ -44,7 +44,7 @@
 			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-			this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+			this.barSubItemParameters = new DevExpress.XtraBars.BarSubItem();
 			this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
 			this.bar3 = new DevExpress.XtraBars.Bar();
@@ -77,7 +77,7 @@
             this.barSubItem1,
             this.barSubItem2,
             this.barSubItem3,
-            this.barSubItem4,
+            this.barSubItemParameters,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -109,7 +109,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemParameters)});
 			this.bar2.OptionsBar.MultiLine = true;
 			this.bar2.OptionsBar.UseWholeRow = true;
 			this.bar2.Text = "Main menu";
@@ -156,8 +156,7 @@
 			this.barSubItem3.Id = 2;
 			this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
 			this.barSubItem3.Name = "barSubItem3";
 			// 
 			// barButtonItem5
@@ -178,14 +177,11 @@
 			this.barButtonItem7.Id = 10;
 			this.barButtonItem7.Name = "barButtonItem7";
 			// 
-			// barSubItem4
+			// barSubItemParameters
 			// 
-			this.barSubItem4.Caption = "参数设置";
-			this.barSubItem4.Id = 3;
-			this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9)});
-			this.barSubItem4.Name = "barSubItem4";
+			this.barSubItemParameters.Caption = "参数设置";
+			this.barSubItemParameters.Id = 3;
+			this.barSubItemParameters.Name = "barSubItemParameters";
 			// 
 			// barButtonItem8
 			// 
@@ -322,7 +318,7 @@
 		private DevExpress.XtraBars.BarSubItem barSubItem1;
 		private DevExpress.XtraBars.BarSubItem barSubItem2;
 		private DevExpress.XtraBars.BarSubItem barSubItem3;
-		private DevExpress.XtraBars.BarSubItem barSubItem4;
+		private DevExpress.XtraBars.BarSubItem barSubItemParameters;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem4;
