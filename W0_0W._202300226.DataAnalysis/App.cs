@@ -7,7 +7,7 @@ namespace W0_0W._202300226.DataAnalysis
 		public static void Init()
 		{
 			var build = Locator.CurrentMutable;
-			build.RegisterLazySingleton(() => new Config());
+			build.Register(() => new Config());
 		}
 	}
 }

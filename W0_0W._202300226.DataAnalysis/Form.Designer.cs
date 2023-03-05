@@ -32,6 +32,7 @@
 			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
 			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
+			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
 			this.bar1 = new DevExpress.XtraBars.Bar();
 			this.bar2 = new DevExpress.XtraBars.Bar();
@@ -254,6 +255,7 @@
 			// chart
 			// 
 			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
+			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
 			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
 			xyDiagram1.AxisX.VisualRange.Auto = false;
 			xyDiagram1.AxisX.VisualRange.MaxValueSerializable = "9";
@@ -277,6 +279,10 @@
         series1};
 			this.chart.Size = new System.Drawing.Size(826, 488);
 			this.chart.TabIndex = 4;
+			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
+			chartTitle1.Text = "峰值:0";
+			this.chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
 			// 
 			// xtraOpenFileDialog
 			// 
@@ -289,10 +295,10 @@
 			this.parametersView.Appearance.Options.UseBackColor = true;
 			this.parametersView.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
 			this.parametersView.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.parametersView.Location = new System.Drawing.Point(0, 0);
+			this.parametersView.Location = new System.Drawing.Point(0, 42);
 			this.parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			this.parametersView.Name = "parametersView";
-			this.parametersView.Size = new System.Drawing.Size(826, 550);
+			this.parametersView.Size = new System.Drawing.Size(826, 488);
 			this.parametersView.TabIndex = 9;
 			// 
 			// Form
