@@ -9,7 +9,7 @@ namespace W0_0W._202300226.DataAnalysis
 	{
 		readonly FileIniDataParser _parser;
 		readonly Lazy<IniData> _data;
-		static readonly string Path = Application.ExecutablePath + "Configuration.ini";
+		static readonly string Path = Application.ExecutablePath + @"\Configuration.ini";
 
 		public Config()
 		{
