@@ -39,7 +39,11 @@ namespace W0_0W._202300226.DataAnalysis.Model
 				{
 					var value = binaryReader.ReadInt16();
 					MaxValue = Math.Max(value, MaxValue);
-					_signals.Add(new Signal(rate, index++, value));
+					if (index % rate == 0)
+					{
+						_signals.Add(new Signal(rate, index, value));
+					}
+					index++;
 				}
 			}
 		}

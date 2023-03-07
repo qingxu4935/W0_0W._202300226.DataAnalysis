@@ -30,18 +30,18 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
-			DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-			DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
-			DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
 			this.bar1 = new DevExpress.XtraBars.Bar();
 			this.bar2 = new DevExpress.XtraBars.Bar();
 			this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
 			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
 			this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+			this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
 			this.barSubItemParameters = new DevExpress.XtraBars.BarSubItem();
 			this.bar3 = new DevExpress.XtraBars.Bar();
 			this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -52,20 +52,20 @@
 			this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+			this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+			this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
 			this.chart = new DevExpress.XtraCharts.ChartControl();
 			this.xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			this.parametersView = new W0_0W._202300226.DataAnalysis.ParametersView();
-			this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-			this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-			this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// barManager1
@@ -152,17 +152,17 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5)});
 			this.barSubItem3.Name = "barSubItem3";
 			// 
-			// barButtonItem5
-			// 
-			this.barButtonItem5.Caption = "定标";
-			this.barButtonItem5.Id = 8;
-			this.barButtonItem5.Name = "barButtonItem5";
-			// 
 			// barButtonItem6
 			// 
 			this.barButtonItem6.Caption = "滤波";
 			this.barButtonItem6.Id = 9;
 			this.barButtonItem6.Name = "barButtonItem6";
+			// 
+			// barSubItem5
+			// 
+			this.barSubItem5.Caption = "定标";
+			this.barSubItem5.Id = 15;
+			this.barSubItem5.Name = "barSubItem5";
 			// 
 			// barSubItemParameters
 			// 
@@ -248,6 +248,12 @@
 			this.barButtonItem2.Id = 5;
 			this.barButtonItem2.Name = "barButtonItem2";
 			// 
+			// barButtonItem5
+			// 
+			this.barButtonItem5.Caption = "定标";
+			this.barButtonItem5.Id = 8;
+			this.barButtonItem5.Name = "barButtonItem5";
+			// 
 			// barButtonItem7
 			// 
 			this.barButtonItem7.Caption = "计算峰值";
@@ -266,37 +272,50 @@
 			this.barButtonItem9.Id = 12;
 			this.barButtonItem9.Name = "barButtonItem9";
 			// 
+			// barSubItem4
+			// 
+			this.barSubItem4.Caption = "参数";
+			this.barSubItem4.Id = 13;
+			this.barSubItem4.Name = "barSubItem4";
+			// 
+			// barButtonItem10
+			// 
+			this.barButtonItem10.Caption = "参数";
+			this.barButtonItem10.Id = 14;
+			this.barButtonItem10.ImageOptions.DisabledSvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem10.ImageOptions.DisabledSvgImage")));
+			this.barButtonItem10.Name = "barButtonItem10";
+			// 
 			// chart
 			// 
-			xyDiagram2.AxisX.AutoScaleBreaks.MaxCount = 9;
-			xyDiagram2.AxisX.Label.TextPattern = "{A}s";
-			xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-			xyDiagram2.AxisX.VisualRange.Auto = false;
-			xyDiagram2.AxisX.VisualRange.MaxValueSerializable = "9";
-			xyDiagram2.AxisX.VisualRange.MinValueSerializable = "0";
-			xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-			xyDiagram2.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.EnableAxisXScrolling = true;
-			xyDiagram2.EnableAxisXZooming = true;
-			xyDiagram2.EnableAxisYScrolling = true;
-			xyDiagram2.EnableAxisYZooming = true;
-			this.chart.Diagram = xyDiagram2;
+			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
+			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
+			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram1.AxisX.VisualRange.Auto = false;
+			xyDiagram1.AxisX.VisualRange.MaxValueSerializable = "9";
+			xyDiagram1.AxisX.VisualRange.MinValueSerializable = "0";
+			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+			xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.EnableAxisXScrolling = true;
+			xyDiagram1.EnableAxisXZooming = true;
+			xyDiagram1.EnableAxisYScrolling = true;
+			xyDiagram1.EnableAxisYZooming = true;
+			this.chart.Diagram = xyDiagram1;
 			this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.chart.Location = new System.Drawing.Point(0, 45);
 			this.chart.Name = "chart";
-			series2.Name = "信号量";
-			series2.View = splineSeriesView2;
+			series1.Name = "信号量";
+			series1.View = lineSeriesView1;
 			this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series1};
 			this.chart.Size = new System.Drawing.Size(826, 485);
 			this.chart.TabIndex = 4;
-			chartTitle2.Alignment = System.Drawing.StringAlignment.Near;
-			chartTitle2.Text = "峰值:0";
+			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
+			chartTitle1.Text = "峰值:0";
 			this.chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            chartTitle1});
 			// 
 			// xtraOpenFileDialog
 			// 
@@ -315,25 +334,6 @@
 			this.parametersView.Size = new System.Drawing.Size(826, 485);
 			this.parametersView.TabIndex = 9;
 			// 
-			// barSubItem4
-			// 
-			this.barSubItem4.Caption = "参数";
-			this.barSubItem4.Id = 13;
-			this.barSubItem4.Name = "barSubItem4";
-			// 
-			// barButtonItem10
-			// 
-			this.barButtonItem10.Caption = "参数";
-			this.barButtonItem10.Id = 14;
-			this.barButtonItem10.ImageOptions.DisabledSvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem10.ImageOptions.DisabledSvgImage")));
-			this.barButtonItem10.Name = "barButtonItem10";
-			// 
-			// barSubItem5
-			// 
-			this.barSubItem5.Caption = "定标";
-			this.barSubItem5.Id = 15;
-			this.barSubItem5.Name = "barSubItem5";
-			// 
 			// Form
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -350,9 +350,9 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "信号量分析";
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
