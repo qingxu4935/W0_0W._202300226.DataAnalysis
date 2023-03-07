@@ -19,7 +19,7 @@ namespace W0_0W._202300226.DataAnalysis.Model
 
 		public string DeviceName => _config.DeviceName;
 
-		public short MaxValue { get; private set; }
+		public int MaxValue { get; private set; }
 
 		public void Load(string path)
 		{
@@ -28,7 +28,7 @@ namespace W0_0W._202300226.DataAnalysis.Model
 			using (var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read))
 			using (var binaryReader = new BinaryReader(fileStream))
 			{
-				for (var i = 0; i <= _config.ValidStart; i++)
+				for (var i = 0; i < _config.ValidStart - 1; i++)
 				{
 					binaryReader.ReadByte();
 				}

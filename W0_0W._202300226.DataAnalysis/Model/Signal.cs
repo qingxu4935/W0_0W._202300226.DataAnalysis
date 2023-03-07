@@ -2,7 +2,7 @@
 {
 	sealed class Signal
 	{
-		public Signal(double rate, int index, short value)
+		public Signal(double rate, int index, int value)
 		{
 			Index = index;
 			Value = value;
@@ -11,6 +11,6 @@
 
 		public double Second { get; }
 		public int Index { get; }
-		public short Value { get; }
+		public int Value { get; }
 	}
 }
