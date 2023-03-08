@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
@@ -25,10 +26,12 @@ namespace W0_0W._202300226.DataAnalysis
 			set => Data[nameof(Config)][nameof(DeviceName)] = value;
 		}
 
+		public double RateValue => (int)Rate * 1000;
+
 		public double Rate
 		{
 			get => double.Parse(Data[nameof(Config)][nameof(Rate)]);
-			set => Data[nameof(Config)][nameof(Rate)] = value.ToString();
+			set => Data[nameof(Config)][nameof(Rate)] = value.ToString(CultureInfo.InvariantCulture);
 		}
 
 		public int ValidStart

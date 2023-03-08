@@ -34,13 +34,13 @@ namespace W0_0W._202300226.DataAnalysis.Model
 				}
 
 				var index = 0;
-				var rate = _config.Rate * 1000;
+				var rate = _config.RateValue;
 				while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 				{
 					var value = binaryReader.ReadInt16();
-					MaxValue = Math.Max(value, MaxValue);
 					if (index % rate == 0)
 					{
+						MaxValue = Math.Max(value, MaxValue);
 						_signals.Add(new Signal(rate, index, value));
 					}
 					index++;
