@@ -87,7 +87,7 @@
 			this.RateTextEdit.Name = "RateTextEdit";
 			this.RateTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			this.RateTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.RateTextEdit.Properties.Mask.EditMask = "##0.00";
+			this.RateTextEdit.Properties.Mask.EditMask = "##0.000";
 			this.RateTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			this.RateTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
 			this.RateTextEdit.Size = new System.Drawing.Size(699, 20);

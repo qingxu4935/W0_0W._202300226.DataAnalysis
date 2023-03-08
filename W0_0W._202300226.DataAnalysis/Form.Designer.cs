@@ -298,10 +298,15 @@
 			// 
 			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
 			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
+			xyDiagram1.AxisX.Title.Text = "秒";
+			xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
 			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
 			xyDiagram1.AxisX.VisualRange.Auto = false;
 			xyDiagram1.AxisX.VisualRange.MaxValueSerializable = "9";
 			xyDiagram1.AxisX.VisualRange.MinValueSerializable = "0";
+			xyDiagram1.AxisX.WholeRange.AutoSideMargins = false;
+			xyDiagram1.AxisX.WholeRange.EndSideMargin = 0D;
+			xyDiagram1.AxisX.WholeRange.StartSideMargin = 0D;
 			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
 			xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
 			xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.True;
