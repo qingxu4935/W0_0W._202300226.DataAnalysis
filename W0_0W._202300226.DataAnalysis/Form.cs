@@ -17,6 +17,7 @@ namespace W0_0W._202300226.DataAnalysis
 			{
 				var fileName = xtraOpenFileDialog.FileName;
 
+
 				var signalRiver = new SignalRiver(Locator.Current.GetService<Config>());
 				signalRiver.Load(fileName);
 
@@ -26,7 +27,7 @@ namespace W0_0W._202300226.DataAnalysis
 				series.ValueDataMembers[0] = nameof(Signal.Value);
 
 				chart.Titles[0].Text = $"#{signalRiver.DeviceName} - 峰值: {signalRiver.MaxValue}";
-
+				statusText.Caption = fileName;
 				if (parametersView.Visible)
 				{
 					parametersView.Visible = false;

@@ -32,7 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
 			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
 			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
 			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
 			this.bar1 = new DevExpress.XtraBars.Bar();
@@ -44,6 +44,7 @@
 			this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
 			this.barSubItemParameters = new DevExpress.XtraBars.BarSubItem();
 			this.bar3 = new DevExpress.XtraBars.Bar();
+			this.statusText = new DevExpress.XtraBars.BarStaticItem();
 			this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -65,7 +66,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// barManager1
@@ -97,9 +98,10 @@
             this.barButtonItem9,
             this.barSubItem4,
             this.barButtonItem10,
-            this.barSubItem5});
+            this.barSubItem5,
+            this.statusText});
 			this.barManager1.MainMenu = this.bar2;
-			this.barManager1.MaxItemId = 16;
+			this.barManager1.MaxItemId = 17;
 			this.barManager1.StatusBar = this.bar3;
 			// 
 			// bar1
@@ -179,11 +181,18 @@
 			this.bar3.DockCol = 0;
 			this.bar3.DockRow = 0;
 			this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+			this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.statusText)});
 			this.bar3.OptionsBar.AllowQuickCustomization = false;
 			this.bar3.OptionsBar.DrawDragBorder = false;
 			this.bar3.OptionsBar.UseWholeRow = true;
 			this.bar3.Text = "Status bar";
-			this.bar3.Visible = false;
+			// 
+			// statusText
+			// 
+			this.statusText.Caption = "##";
+			this.statusText.Id = 16;
+			this.statusText.Name = "statusText";
 			// 
 			// barDockControlTop
 			// 
@@ -198,10 +207,10 @@
 			// 
 			this.barDockControlBottom.CausesValidation = false;
 			this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.barDockControlBottom.Location = new System.Drawing.Point(0, 530);
+			this.barDockControlBottom.Location = new System.Drawing.Point(0, 527);
 			this.barDockControlBottom.Manager = this.barManager1;
 			this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlBottom.Size = new System.Drawing.Size(826, 20);
+			this.barDockControlBottom.Size = new System.Drawing.Size(826, 23);
 			// 
 			// barDockControlLeft
 			// 
@@ -210,7 +219,7 @@
 			this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
 			this.barDockControlLeft.Manager = this.barManager1;
 			this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlLeft.Size = new System.Drawing.Size(0, 485);
+			this.barDockControlLeft.Size = new System.Drawing.Size(0, 482);
 			// 
 			// barDockControlRight
 			// 
@@ -219,7 +228,7 @@
 			this.barDockControlRight.Location = new System.Drawing.Point(826, 45);
 			this.barDockControlRight.Manager = this.barManager1;
 			this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlRight.Size = new System.Drawing.Size(0, 485);
+			this.barDockControlRight.Size = new System.Drawing.Size(0, 482);
 			// 
 			// barSubItem2
 			// 
@@ -307,10 +316,10 @@
 			this.chart.Location = new System.Drawing.Point(0, 45);
 			this.chart.Name = "chart";
 			series1.Name = "信号量";
-			series1.View = lineSeriesView1;
+			series1.View = splineSeriesView1;
 			this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-			this.chart.Size = new System.Drawing.Size(826, 485);
+			this.chart.Size = new System.Drawing.Size(826, 482);
 			this.chart.TabIndex = 4;
 			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
 			chartTitle1.Text = "峰值:0";
@@ -331,7 +340,7 @@
 			this.parametersView.Location = new System.Drawing.Point(0, 45);
 			this.parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			this.parametersView.Name = "parametersView";
-			this.parametersView.Size = new System.Drawing.Size(826, 485);
+			this.parametersView.Size = new System.Drawing.Size(826, 482);
 			this.parametersView.TabIndex = 9;
 			// 
 			// Form
@@ -351,7 +360,7 @@
 			this.Text = "信号量分析";
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
 			this.ResumeLayout(false);
@@ -388,6 +397,7 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem10;
 		private DevExpress.XtraBars.BarSubItem barSubItem4;
 		private DevExpress.XtraBars.BarSubItem barSubItem5;
+		private DevExpress.XtraBars.BarStaticItem statusText;
 	}
 }
 
