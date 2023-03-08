@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
 
@@ -17,6 +18,7 @@ namespace W0_0W._202300226.DataAnalysis
 			{
 				var fileName = xtraOpenFileDialog.FileName;
 
+				var progressPanelHandle = ShowProgressPanel();
 
 				var signalRiver = new SignalRiver(Locator.Current.GetService<Config>());
 				signalRiver.Load(fileName);
@@ -32,6 +34,8 @@ namespace W0_0W._202300226.DataAnalysis
 				{
 					parametersView.Visible = false;
 				}
+
+				CloseProgressPanel(progressPanelHandle);
 			}
 		}
 
@@ -39,6 +43,16 @@ namespace W0_0W._202300226.DataAnalysis
 		{
 			parametersView.Visible = true;
 			parametersView.BringToFront();
+		}
+
+		IOverlaySplashScreenHandle ShowProgressPanel()
+		{
+			return SplashScreenManager.ShowOverlayForm(this, OverlayWindowOptions.Default);
+		}
+
+		void CloseProgressPanel(IOverlaySplashScreenHandle handle)
+		{
+			SplashScreenManager.CloseOverlayForm(handle);
 		}
 	}
 }
