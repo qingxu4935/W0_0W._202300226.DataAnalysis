@@ -42,12 +42,6 @@ namespace W0_0W._202300226.DataAnalysis
 			}
 		}
 
-		void barSubItemParameters_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-		{
-			parametersView.Visible = true;
-			parametersView.BringToFront();
-		}
-
 		IOverlaySplashScreenHandle ShowProgressPanel()
 		{
 			return SplashScreenManager.ShowOverlayForm(this, OverlayWindowOptions.Default);
@@ -97,6 +91,12 @@ namespace W0_0W._202300226.DataAnalysis
 				}
 				CloseProgressPanel(progressPanelHandle);
 			}
+		}
+
+		void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			parametersView.Visible = true;
+			parametersView.BringToFront();
 		}
 	}
 }
