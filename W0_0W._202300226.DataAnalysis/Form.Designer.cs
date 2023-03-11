@@ -30,10 +30,10 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
-			DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-			DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
-			DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
 			this.bar1 = new DevExpress.XtraBars.Bar();
 			this.Preview = new DevExpress.XtraBars.BarButtonItem();
@@ -58,9 +58,9 @@
 			this.xtraSaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// barManager1
@@ -123,7 +123,7 @@
 			// 
 			this.Paramters.Caption = "参数设置";
 			this.Paramters.Id = 19;
-			this.Paramters.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemParamters.ImageOptions.SvgImage")));
+			this.Paramters.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Paramters.ImageOptions.SvgImage")));
 			this.Paramters.Name = "Paramters";
 			this.Paramters.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
 			// 
@@ -243,40 +243,37 @@
 			// 
 			// chart
 			// 
-			xyDiagram2.AxisX.AutoScaleBreaks.MaxCount = 9;
-			xyDiagram2.AxisX.Label.TextPattern = "{A}s";
-			xyDiagram2.AxisX.Title.Text = "秒";
-			xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-			xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-			xyDiagram2.AxisX.VisualRange.Auto = false;
-			xyDiagram2.AxisX.VisualRange.MaxValueSerializable = "9";
-			xyDiagram2.AxisX.VisualRange.MinValueSerializable = "0";
-			xyDiagram2.AxisX.WholeRange.AutoSideMargins = false;
-			xyDiagram2.AxisX.WholeRange.EndSideMargin = 0D;
-			xyDiagram2.AxisX.WholeRange.StartSideMargin = 0D;
-			xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-			xyDiagram2.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.True;
-			xyDiagram2.EnableAxisXScrolling = true;
-			xyDiagram2.EnableAxisXZooming = true;
-			xyDiagram2.EnableAxisYScrolling = true;
-			xyDiagram2.EnableAxisYZooming = true;
-			this.chart.Diagram = xyDiagram2;
+			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
+			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
+			xyDiagram1.AxisX.Title.Text = "秒";
+			xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram1.AxisX.WholeRange.AutoSideMargins = false;
+			xyDiagram1.AxisX.WholeRange.EndSideMargin = 0D;
+			xyDiagram1.AxisX.WholeRange.StartSideMargin = 0D;
+			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+			xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram1.EnableAxisXScrolling = true;
+			xyDiagram1.EnableAxisXZooming = true;
+			xyDiagram1.EnableAxisYScrolling = true;
+			xyDiagram1.EnableAxisYZooming = true;
+			this.chart.Diagram = xyDiagram1;
 			this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
 			this.chart.Location = new System.Drawing.Point(0, 49);
 			this.chart.Name = "chart";
-			series2.Name = "信号量";
-			series2.View = splineSeriesView2;
+			series1.Name = "信号量";
+			series1.View = lineSeriesView1;
 			this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series1};
 			this.chart.Size = new System.Drawing.Size(826, 478);
 			this.chart.TabIndex = 4;
-			chartTitle2.Alignment = System.Drawing.StringAlignment.Near;
-			chartTitle2.Text = "峰值:0";
+			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
+			chartTitle1.Text = "峰值:0";
 			this.chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            chartTitle1});
 			// 
 			// xtraOpenFileDialog
 			// 
@@ -315,9 +312,9 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "信号量分析";
 			((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
