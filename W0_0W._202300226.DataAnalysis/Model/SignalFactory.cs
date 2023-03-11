@@ -5,12 +5,12 @@ using Ardalis.GuardClauses;
 
 namespace W0_0W._202300226.DataAnalysis.Model
 {
-	sealed class SignalRiver
+	sealed class SignalFactory
 	{
 		readonly Config _config;
 		readonly List<Signal> _signals = new List<Signal>();
 
-		public SignalRiver(Config config)
+		public SignalFactory(Config config)
 		{
 			_config = config;
 		}
@@ -37,7 +37,7 @@ namespace W0_0W._202300226.DataAnalysis.Model
 				var rate = _config.RateValue;
 				while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 				{
-					var value = binaryReader.ReadInt16();
+					var value = binaryReader.ReadByte();
 					if (index % rate == 0)
 					{
 						MaxValue = Math.Max(value, MaxValue);

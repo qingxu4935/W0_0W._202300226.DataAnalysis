@@ -25,7 +25,7 @@ namespace W0_0W._202300226.DataAnalysis
 
 				using (ShowProgress())
 				{
-					var signalRiver = new SignalRiver(Locator.Current.GetService<Config>());
+					var signalRiver = new SignalFactory(Locator.Current.GetService<Config>());
 					signalRiver.Load(fileName);
 
 					var series = chart.Series[0];
