@@ -8,7 +8,7 @@ namespace W0_0W._202300226.DataAnalysis.Model
 	sealed class SignalFactory
 	{
 		readonly Config _config;
-		readonly List<Signal> _signals = new List<Signal>();
+		readonly List<Signal> _signals = new();
 
 		public SignalFactory(Config config)
 		{
@@ -25,26 +25,24 @@ namespace W0_0W._202300226.DataAnalysis.Model
 		{
 			Guard.Against.NullOrEmpty(path, nameof(path));
 
-			using (var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read))
-			using (var binaryReader = new BinaryReader(fileStream))
+			using var fileStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+			using var binaryReader = new BinaryReader(fileStream);
+			for (var i = 0; i < _config.ValidStart - 1; i++)
 			{
-				for (var i = 0; i < _config.ValidStart - 1; i++)
-				{
-					binaryReader.ReadByte();
-				}
+				binaryReader.ReadByte();
+			}
 
-				var index = 0;
-				var rate = _config.RateValue;
-				while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
+			var index = 0;
+			var rate = _config.RateValue;
+			while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
+			{
+				var value = binaryReader.ReadByte();
+				if (index % rate == 0)
 				{
-					var value = binaryReader.ReadByte();
-					if (index % rate == 0)
-					{
-						MaxValue = Math.Max(value, MaxValue);
-						_signals.Add(new Signal(rate, index, value));
-					}
-					index++;
+					MaxValue = Math.Max(value, MaxValue);
+					_signals.Add(new Signal(rate, index, value));
 				}
+				index++;
 			}
 		}
 	}

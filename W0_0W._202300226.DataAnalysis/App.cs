@@ -7,9 +7,9 @@ namespace W0_0W._202300226.DataAnalysis
 	{
 		public static void Init()
 		{
-			var build = Locator.CurrentMutable;
-			build.Register(() => new Config());
-			build.Register(() => new SignalFactory(Locator.Current.GetService<Config>()));
+			SplatRegistrations.Register<Config>();
+			SplatRegistrations.Register<SignalFactory>();
+			SplatRegistrations.SetupIOC();
 		}
 	}
 }
