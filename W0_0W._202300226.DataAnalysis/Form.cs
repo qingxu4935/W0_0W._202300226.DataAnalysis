@@ -8,93 +8,92 @@ using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
 
-namespace W0_0W._202300226.DataAnalysis
+namespace W0_0W._202300226.DataAnalysis;
+
+public partial class Form : DevExpress.XtraEditors.XtraForm
 {
-	public partial class Form : DevExpress.XtraEditors.XtraForm
+	public Form()
 	{
-		public Form()
-		{
-			InitializeComponent();
-		}
+		InitializeComponent();
+	}
 
-		void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	{
+		if (xtraOpenFileDialog.ShowDialog(this) == DialogResult.OK)
 		{
-			if (xtraOpenFileDialog.ShowDialog(this) == DialogResult.OK)
+			var fileName = xtraOpenFileDialog.FileName;
+
+			using (ShowProgress())
 			{
-				var fileName = xtraOpenFileDialog.FileName;
+				var signalRiver = Locator.Current.GetService<SignalFactory>();
+				signalRiver.Load(fileName);
 
-				using (ShowProgress())
+				var series = chart.Series[0];
+				series.DataSource = signalRiver.Signals;
+				series.ArgumentDataMember = nameof(Signal.Second);
+				series.ValueDataMembers[0] = nameof(Signal.Value);
+
+				chart.Titles[0].Text = $"#{signalRiver.DeviceName} - 峰值: {signalRiver.MaxValue}";
+				statusText.Caption = fileName;
+				if (parametersView.Visible)
 				{
-					var signalRiver = Locator.Current.GetService<SignalFactory>();
-					signalRiver.Load(fileName);
-
-					var series = chart.Series[0];
-					series.DataSource = signalRiver.Signals;
-					series.ArgumentDataMember = nameof(Signal.Second);
-					series.ValueDataMembers[0] = nameof(Signal.Value);
-
-					chart.Titles[0].Text = $"#{signalRiver.DeviceName} - 峰值: {signalRiver.MaxValue}";
-					statusText.Caption = fileName;
-					if (parametersView.Visible)
-					{
-						parametersView.Visible = false;
-					}
+					parametersView.Visible = false;
 				}
 			}
 		}
+	}
 
-		void Preview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-		{
-			chart.ShowPrintPreview();
-		}
+	void Preview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	{
+		chart.ShowPrintPreview();
+	}
 
-		void Export_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	void Export_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	{
+		if (xtraSaveFileDialog.ShowDialog() == DialogResult.OK)
 		{
-			if (xtraSaveFileDialog.ShowDialog() == DialogResult.OK)
+			chart.OptionsPrint.SizeMode = PrintSizeMode.Zoom;
+			var filename = xtraSaveFileDialog.FileName;
+			var extension = Path.GetExtension(filename);
+			using (ShowProgress())
 			{
-				chart.OptionsPrint.SizeMode = PrintSizeMode.Zoom;
-				var filename = xtraSaveFileDialog.FileName;
-				var extension = Path.GetExtension(filename);
-				using (ShowProgress())
+				switch (extension)
 				{
-					switch (extension)
-					{
-						case ".pdf":
+					case ".pdf":
+						{
+							chart.OptionsPrint.ImageFormat = PrintImageFormat.Metafile;
+							var options = new PdfExportOptions
 							{
-								chart.OptionsPrint.ImageFormat = PrintImageFormat.Metafile;
-								var options = new PdfExportOptions
-								{
-									ConvertImagesToJpeg = false
-								};
+								ConvertImagesToJpeg = false
+							};
 
-								chart.ExportToPdf(filename, options);
+							chart.ExportToPdf(filename, options);
 
-								break;
-							}
-						case ".xls":
-							chart.ExportToXls(filename);
 							break;
-						case ".xlsx":
-							chart.ExportToXlsx(filename);
-							break;
-						case ".docx":
-							chart.ExportToDocx(filename);
-							break;
-					}
+						}
+					case ".xls":
+						chart.ExportToXls(filename);
+						break;
+					case ".xlsx":
+						chart.ExportToXlsx(filename);
+						break;
+					case ".docx":
+						chart.ExportToDocx(filename);
+						break;
 				}
 			}
 		}
+	}
 
-		void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-		{
-			parametersView.Visible = true;
-			parametersView.BringToFront();
-		}
+	void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	{
+		parametersView.Visible = true;
+		parametersView.BringToFront();
+	}
 
-		IDisposable ShowProgress()
-		{
-			var progressPanelHandle = SplashScreenManager.ShowOverlayForm(this, OverlayWindowOptions.Default);
-			return Disposable.Create(() => SplashScreenManager.CloseOverlayForm(progressPanelHandle));
-		}
+	IDisposable ShowProgress()
+	{
+		var progressPanelHandle = SplashScreenManager.ShowOverlayForm(this, OverlayWindowOptions.Default);
+		return Disposable.Create(() => SplashScreenManager.CloseOverlayForm(progressPanelHandle));
 	}
 }

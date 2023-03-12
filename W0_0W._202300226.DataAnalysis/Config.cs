@@ -4,51 +4,50 @@ using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
 
-namespace W0_0W._202300226.DataAnalysis
+namespace W0_0W._202300226.DataAnalysis;
+
+sealed class Config
 {
-	sealed class Config
+	readonly FileIniDataParser _parser;
+	readonly Lazy<IniData> _data;
+	static readonly string Path = System.IO.Path.Combine(Application.StartupPath, "Configuration.ini");
+
+	public Config()
 	{
-		readonly FileIniDataParser _parser;
-		readonly Lazy<IniData> _data;
-		static readonly string Path = System.IO.Path.Combine(Application.StartupPath, "Configuration.ini");
+		_parser = new FileIniDataParser();
+		_data = new Lazy<IniData>(() => _parser.ReadFile(Path));
+	}
 
-		public Config()
-		{
-			_parser = new FileIniDataParser();
-			_data = new Lazy<IniData>(() => _parser.ReadFile(Path));
-		}
+	IniData Data => _data.Value;
 
-		IniData Data => _data.Value;
+	public string DeviceName
+	{
+		get => Data[nameof(Config)][nameof(DeviceName)];
+		set => Data[nameof(Config)][nameof(DeviceName)] = value;
+	}
 
-		public string DeviceName
-		{
-			get => Data[nameof(Config)][nameof(DeviceName)];
-			set => Data[nameof(Config)][nameof(DeviceName)] = value;
-		}
+	public double RateValue => (int)Rate * 1000;
 
-		public double RateValue => (int)Rate * 1000;
+	public double Rate
+	{
+		get => double.Parse(Data[nameof(Config)][nameof(Rate)]);
+		set => Data[nameof(Config)][nameof(Rate)] = value.ToString(CultureInfo.InvariantCulture);
+	}
 
-		public double Rate
-		{
-			get => double.Parse(Data[nameof(Config)][nameof(Rate)]);
-			set => Data[nameof(Config)][nameof(Rate)] = value.ToString(CultureInfo.InvariantCulture);
-		}
+	public int ValidStart
+	{
+		get => int.Parse(Data[nameof(Config)][nameof(ValidStart)]);
+		set => Data[nameof(Config)][nameof(ValidStart)] = value.ToString();
+	}
 
-		public int ValidStart
-		{
-			get => int.Parse(Data[nameof(Config)][nameof(ValidStart)]);
-			set => Data[nameof(Config)][nameof(ValidStart)] = value.ToString();
-		}
+	public int Sensitivity
+	{
+		get => int.Parse(Data[nameof(Config)][nameof(Sensitivity)]);
+		set => Data[nameof(Config)][nameof(Sensitivity)] = value.ToString();
+	}
 
-		public int Sensitivity
-		{
-			get => int.Parse(Data[nameof(Config)][nameof(Sensitivity)]);
-			set => Data[nameof(Config)][nameof(Sensitivity)] = value.ToString();
-		}
-
-		public void Save()
-		{
-			_parser.WriteFile(Path, Data);
-		}
+	public void Save()
+	{
+		_parser.WriteFile(Path, Data);
 	}
 }

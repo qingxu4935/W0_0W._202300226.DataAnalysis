@@ -1,15 +1,14 @@
 ﻿using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
 
-namespace W0_0W._202300226.DataAnalysis
+namespace W0_0W._202300226.DataAnalysis;
+
+static class App
 {
-	static class App
+	public static void Init()
 	{
-		public static void Init()
-		{
-			SplatRegistrations.Register<Config>();
-			SplatRegistrations.Register<SignalFactory>();
-			SplatRegistrations.SetupIOC();
-		}
+		SplatRegistrations.Register<Config>();
+		SplatRegistrations.Register<SignalFactory>();
+		SplatRegistrations.SetupIOC();
 	}
 }
