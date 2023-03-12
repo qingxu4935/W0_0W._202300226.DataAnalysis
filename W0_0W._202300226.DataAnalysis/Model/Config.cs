@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
 
-namespace W0_0W._202300226.DataAnalysis;
+namespace W0_0W._202300226.DataAnalysis.Model;
 
 sealed class Config
 {

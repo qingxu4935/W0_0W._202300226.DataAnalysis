@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Docking2010;
 using Splat;
+using W0_0W._202300226.DataAnalysis.Model;
 
 namespace W0_0W._202300226.DataAnalysis;
 

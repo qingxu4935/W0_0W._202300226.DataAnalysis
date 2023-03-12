@@ -96,7 +96,7 @@
 			// 
 			// configBindingSource
 			// 
-			this.configBindingSource.DataSource = typeof(W0_0W._202300226.DataAnalysis.Config);
+			this.configBindingSource.DataSource = typeof(W0_0W._202300226.DataAnalysis.Model.Config);
 			// 
 			// ValidStartTextEdit
 			// 
