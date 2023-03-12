@@ -109,7 +109,7 @@
 			Paramters.Id = 19;
 			Paramters.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("Paramters.ImageOptions.SvgImage");
 			Paramters.Name = "Paramters";
-			Paramters.ItemClick += barButtonItem11_ItemClick;
+			Paramters.ItemClick += Parameters_ItemClick;
 			// 
 			// bar2
 			// 

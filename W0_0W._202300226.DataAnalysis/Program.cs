@@ -8,6 +8,7 @@ static class Program
 	[STAThread]
 	static void Main()
 	{
+		//设置中文
 		System.Threading.Thread.CurrentThread.CurrentCulture
 			= System.Threading.Thread.CurrentThread.CurrentUICulture
 				= new System.Globalization.CultureInfo("zh-CN");
