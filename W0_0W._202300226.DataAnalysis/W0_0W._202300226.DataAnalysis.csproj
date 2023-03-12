@@ -1,37 +1,38 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>WinExe</OutputType>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-  </PropertyGroup>
-  <ItemGroup>
-	  <EmbeddedResource Include="Properties\licenses.licx" />
-    <None Update="Configuration.ini">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="ini-parser-netstandard" Version="2.5.2" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="DevExpress.Win.BonusSkins" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Images" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Sparkline.Core" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Charts" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Diagram" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Dialogs" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
-    <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
-    <PackageReference Include="Splat" Version="14.6.8" />
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.3" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
-  </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+		<OutputType>WinExe</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Properties\licenses.licx" />
+		<None Update="Configuration.ini">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ini-parser-netstandard" Version="2.5.2" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+		<PackageReference Include="DevExpress.Win.BonusSkins" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Images" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Sparkline.Core" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Charts" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Diagram" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Dialogs" Version="22.2.*-*" />
+		<PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
+		<PackageReference Include="Splat" Version="14.6.8" />
+		<PackageReference Include="System.Reactive" Version="5.0.0" />
+		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.3" />
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+	</ItemGroup>
 </Project>
