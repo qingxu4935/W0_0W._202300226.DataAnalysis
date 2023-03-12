@@ -11,11 +11,12 @@ namespace W0_0W._202300226.DataAnalysis
 		[STAThread]
 		static void Main()
 		{
-			System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-Hans");
+			System.Threading.Thread.CurrentThread.CurrentCulture
+				= System.Threading.Thread.CurrentThread.CurrentUICulture
+				= new System.Globalization.CultureInfo("zh-CN");
 			DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
 
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
+			ApplicationConfiguration.Initialize();
 			App.Init();
 			Application.Run(new Form());
 		}
