@@ -39,4 +39,10 @@
 		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.3" />
 		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
 	</ItemGroup>
+	<ItemGroup>
+		<zh_CN Include="$(SolutionDir)\zh-CN\**\*.*" />
+	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Copy SourceFiles="@(zh_CN)" DestinationFolder="$(TargetDir)zh-CN\%(RecursiveDir)" SkipUnchangedFiles="true"/>
+	</Target>
 </Project>
