@@ -28,223 +28,203 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
 			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
 			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
-			this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-			this.bar1 = new DevExpress.XtraBars.Bar();
-			this.Preview = new DevExpress.XtraBars.BarButtonItem();
-			this.Export = new DevExpress.XtraBars.BarButtonItem();
-			this.Paramters = new DevExpress.XtraBars.BarButtonItem();
-			this.bar2 = new DevExpress.XtraBars.Bar();
-			this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-			this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-			this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-			this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
-			this.bar3 = new DevExpress.XtraBars.Bar();
-			this.statusText = new DevExpress.XtraBars.BarStaticItem();
-			this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-			this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-			this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-			this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-			this.chart = new DevExpress.XtraCharts.ChartControl();
-			this.xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-			this.parametersView = new W0_0W._202300226.DataAnalysis.ParametersView();
-			this.xtraSaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
-			this.SuspendLayout();
+			barManager1 = new DevExpress.XtraBars.BarManager(components);
+			bar1 = new DevExpress.XtraBars.Bar();
+			Preview = new DevExpress.XtraBars.BarButtonItem();
+			Export = new DevExpress.XtraBars.BarButtonItem();
+			Paramters = new DevExpress.XtraBars.BarButtonItem();
+			bar2 = new DevExpress.XtraBars.Bar();
+			barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+			barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+			barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+			barSubItem5 = new DevExpress.XtraBars.BarSubItem();
+			bar3 = new DevExpress.XtraBars.Bar();
+			statusText = new DevExpress.XtraBars.BarStaticItem();
+			barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+			barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+			barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+			barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+			barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+			chart = new DevExpress.XtraCharts.ChartControl();
+			xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(components);
+			parametersView = new ParametersView();
+			xtraSaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(components);
+			((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)chart).BeginInit();
+			((System.ComponentModel.ISupportInitialize)xyDiagram1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)series1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView1).BeginInit();
+			SuspendLayout();
 			// 
 			// barManager1
 			// 
-			this.barManager1.AllowCustomization = false;
-			this.barManager1.AllowQuickCustomization = false;
-			this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar2,
-            this.bar3});
-			this.barManager1.DockControls.Add(this.barDockControlTop);
-			this.barManager1.DockControls.Add(this.barDockControlBottom);
-			this.barManager1.DockControls.Add(this.barDockControlLeft);
-			this.barManager1.DockControls.Add(this.barDockControlRight);
-			this.barManager1.Form = this;
-			this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barSubItem1,
-            this.barSubItem3,
-            this.barButtonItem1,
-            this.barButtonItem5,
-            this.barButtonItem6,
-            this.barSubItem5,
-            this.statusText,
-            this.Preview,
-            this.Export,
-            this.Paramters});
-			this.barManager1.MainMenu = this.bar2;
-			this.barManager1.MaxItemId = 20;
-			this.barManager1.StatusBar = this.bar3;
+			barManager1.AllowCustomization = false;
+			barManager1.AllowQuickCustomization = false;
+			barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] { bar1, bar2, bar3 });
+			barManager1.DockControls.Add(barDockControlTop);
+			barManager1.DockControls.Add(barDockControlBottom);
+			barManager1.DockControls.Add(barDockControlLeft);
+			barManager1.DockControls.Add(barDockControlRight);
+			barManager1.Form = this;
+			barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barSubItem1, barSubItem3, barButtonItem1, barButtonItem5, barButtonItem6, barSubItem5, statusText, Preview, Export, Paramters });
+			barManager1.MainMenu = bar2;
+			barManager1.MaxItemId = 20;
+			barManager1.StatusBar = bar3;
 			// 
 			// bar1
 			// 
-			this.bar1.BarName = "Tools";
-			this.bar1.DockCol = 0;
-			this.bar1.DockRow = 1;
-			this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-			this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Preview, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Export, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Paramters, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-			this.bar1.Text = "Tools";
+			bar1.BarName = "Tools";
+			bar1.DockCol = 0;
+			bar1.DockRow = 1;
+			bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+			bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Preview, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Export, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Paramters, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+			bar1.Text = "Tools";
 			// 
 			// Preview
 			// 
-			this.Preview.Caption = "预览";
-			this.Preview.Id = 17;
-			this.Preview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Preview.ImageOptions.SvgImage")));
-			this.Preview.Name = "Preview";
-			this.Preview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Preview_ItemClick);
+			Preview.Caption = "预览";
+			Preview.Id = 17;
+			Preview.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("Preview.ImageOptions.SvgImage");
+			Preview.Name = "Preview";
+			Preview.ItemClick += Preview_ItemClick;
 			// 
 			// Export
 			// 
-			this.Export.Caption = "导出";
-			this.Export.Id = 18;
-			this.Export.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Export.ImageOptions.SvgImage")));
-			this.Export.Name = "Export";
-			this.Export.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Export_ItemClick);
+			Export.Caption = "导出";
+			Export.Id = 18;
+			Export.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("Export.ImageOptions.SvgImage");
+			Export.Name = "Export";
+			Export.ItemClick += Export_ItemClick;
 			// 
 			// Paramters
 			// 
-			this.Paramters.Caption = "参数设置";
-			this.Paramters.Id = 19;
-			this.Paramters.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Paramters.ImageOptions.SvgImage")));
-			this.Paramters.Name = "Paramters";
-			this.Paramters.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+			Paramters.Caption = "参数设置";
+			Paramters.Id = 19;
+			Paramters.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("Paramters.ImageOptions.SvgImage");
+			Paramters.Name = "Paramters";
+			Paramters.ItemClick += barButtonItem11_ItemClick;
 			// 
 			// bar2
 			// 
-			this.bar2.BarName = "Main menu";
-			this.bar2.DockCol = 0;
-			this.bar2.DockRow = 0;
-			this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-			this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-			this.bar2.OptionsBar.MultiLine = true;
-			this.bar2.OptionsBar.UseWholeRow = true;
-			this.bar2.Text = "Main menu";
+			bar2.BarName = "Main menu";
+			bar2.DockCol = 0;
+			bar2.DockRow = 0;
+			bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+			bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barSubItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+			bar2.OptionsBar.MultiLine = true;
+			bar2.OptionsBar.UseWholeRow = true;
+			bar2.Text = "Main menu";
 			// 
 			// barSubItem1
 			// 
-			this.barSubItem1.Caption = "数据获取";
-			this.barSubItem1.Id = 0;
-			this.barSubItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem1.ImageOptions.SvgImage")));
-			this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-			this.barSubItem1.Name = "barSubItem1";
+			barSubItem1.Caption = "数据获取";
+			barSubItem1.Id = 0;
+			barSubItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barSubItem1.ImageOptions.SvgImage");
+			barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+			barSubItem1.Name = "barSubItem1";
 			// 
 			// barButtonItem1
 			// 
-			this.barButtonItem1.Caption = "打开历史数据";
-			this.barButtonItem1.Id = 4;
-			this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-			this.barButtonItem1.Name = "barButtonItem1";
-			this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+			barButtonItem1.Caption = "打开历史数据";
+			barButtonItem1.Id = 4;
+			barButtonItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+			barButtonItem1.Name = "barButtonItem1";
+			barButtonItem1.ItemClick += barButtonItem1_ItemClick;
 			// 
 			// barSubItem3
 			// 
-			this.barSubItem3.Caption = "数据分析";
-			this.barSubItem3.Id = 2;
-			this.barSubItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem3.ImageOptions.SvgImage")));
-			this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5)});
-			this.barSubItem3.Name = "barSubItem3";
+			barSubItem3.Caption = "数据分析";
+			barSubItem3.Id = 2;
+			barSubItem3.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barSubItem3.ImageOptions.SvgImage");
+			barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barButtonItem6), new DevExpress.XtraBars.LinkPersistInfo(barSubItem5) });
+			barSubItem3.Name = "barSubItem3";
 			// 
 			// barButtonItem6
 			// 
-			this.barButtonItem6.Caption = "滤波";
-			this.barButtonItem6.Id = 9;
-			this.barButtonItem6.Name = "barButtonItem6";
+			barButtonItem6.Caption = "滤波";
+			barButtonItem6.Id = 9;
+			barButtonItem6.Name = "barButtonItem6";
 			// 
 			// barSubItem5
 			// 
-			this.barSubItem5.Caption = "定标";
-			this.barSubItem5.Id = 15;
-			this.barSubItem5.Name = "barSubItem5";
+			barSubItem5.Caption = "定标";
+			barSubItem5.Id = 15;
+			barSubItem5.Name = "barSubItem5";
 			// 
 			// bar3
 			// 
-			this.bar3.BarName = "Status bar";
-			this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-			this.bar3.DockCol = 0;
-			this.bar3.DockRow = 0;
-			this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-			this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.statusText)});
-			this.bar3.OptionsBar.AllowQuickCustomization = false;
-			this.bar3.OptionsBar.DrawDragBorder = false;
-			this.bar3.OptionsBar.UseWholeRow = true;
-			this.bar3.Text = "Status bar";
+			bar3.BarName = "Status bar";
+			bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+			bar3.DockCol = 0;
+			bar3.DockRow = 0;
+			bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+			bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(statusText) });
+			bar3.OptionsBar.AllowQuickCustomization = false;
+			bar3.OptionsBar.DrawDragBorder = false;
+			bar3.OptionsBar.UseWholeRow = true;
+			bar3.Text = "Status bar";
 			// 
 			// statusText
 			// 
-			this.statusText.Caption = "##";
-			this.statusText.Id = 16;
-			this.statusText.Name = "statusText";
+			statusText.Caption = "##";
+			statusText.Id = 16;
+			statusText.Name = "statusText";
 			// 
 			// barDockControlTop
 			// 
-			this.barDockControlTop.CausesValidation = false;
-			this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-			this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-			this.barDockControlTop.Manager = this.barManager1;
-			this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlTop.Size = new System.Drawing.Size(826, 49);
+			barDockControlTop.CausesValidation = false;
+			barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+			barDockControlTop.Location = new System.Drawing.Point(0, 0);
+			barDockControlTop.Manager = barManager1;
+			barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			barDockControlTop.Size = new System.Drawing.Size(826, 49);
 			// 
 			// barDockControlBottom
 			// 
-			this.barDockControlBottom.CausesValidation = false;
-			this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.barDockControlBottom.Location = new System.Drawing.Point(0, 527);
-			this.barDockControlBottom.Manager = this.barManager1;
-			this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlBottom.Size = new System.Drawing.Size(826, 23);
+			barDockControlBottom.CausesValidation = false;
+			barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+			barDockControlBottom.Location = new System.Drawing.Point(0, 527);
+			barDockControlBottom.Manager = barManager1;
+			barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			barDockControlBottom.Size = new System.Drawing.Size(826, 23);
 			// 
 			// barDockControlLeft
 			// 
-			this.barDockControlLeft.CausesValidation = false;
-			this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-			this.barDockControlLeft.Location = new System.Drawing.Point(0, 49);
-			this.barDockControlLeft.Manager = this.barManager1;
-			this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlLeft.Size = new System.Drawing.Size(0, 478);
+			barDockControlLeft.CausesValidation = false;
+			barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+			barDockControlLeft.Location = new System.Drawing.Point(0, 49);
+			barDockControlLeft.Manager = barManager1;
+			barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			barDockControlLeft.Size = new System.Drawing.Size(0, 478);
 			// 
 			// barDockControlRight
 			// 
-			this.barDockControlRight.CausesValidation = false;
-			this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-			this.barDockControlRight.Location = new System.Drawing.Point(826, 49);
-			this.barDockControlRight.Manager = this.barManager1;
-			this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.barDockControlRight.Size = new System.Drawing.Size(0, 478);
+			barDockControlRight.CausesValidation = false;
+			barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+			barDockControlRight.Location = new System.Drawing.Point(826, 49);
+			barDockControlRight.Manager = barManager1;
+			barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			barDockControlRight.Size = new System.Drawing.Size(0, 478);
 			// 
 			// barButtonItem5
 			// 
-			this.barButtonItem5.Caption = "定标";
-			this.barButtonItem5.Id = 8;
-			this.barButtonItem5.Name = "barButtonItem5";
+			barButtonItem5.Caption = "定标";
+			barButtonItem5.Id = 8;
+			barButtonItem5.Name = "barButtonItem5";
 			// 
 			// chart
 			// 
 			xyDiagram1.AxisX.AutoScaleBreaks.MaxCount = 9;
+			xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("Microsoft YaHei", 8F);
 			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
+			xyDiagram1.AxisX.Title.DXFont = new DevExpress.Drawing.DXFont("Microsoft YaHei", 12F);
 			xyDiagram1.AxisX.Title.Text = "秒";
 			xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
 			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
@@ -259,66 +239,64 @@
 			xyDiagram1.EnableAxisXZooming = true;
 			xyDiagram1.EnableAxisYScrolling = true;
 			xyDiagram1.EnableAxisYZooming = true;
-			this.chart.Diagram = xyDiagram1;
-			this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-			this.chart.Location = new System.Drawing.Point(0, 49);
-			this.chart.Name = "chart";
+			chart.Diagram = xyDiagram1;
+			chart.Dock = System.Windows.Forms.DockStyle.Fill;
+			chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+			chart.Location = new System.Drawing.Point(0, 49);
+			chart.Name = "chart";
 			series1.Name = "信号量";
 			series1.View = lineSeriesView1;
-			this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-			this.chart.Size = new System.Drawing.Size(826, 478);
-			this.chart.TabIndex = 4;
+			chart.SeriesSerializable = (new DevExpress.XtraCharts.Series[] { series1 });
+			chart.Size = new System.Drawing.Size(826, 478);
+			chart.TabIndex = 4;
 			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
+			chartTitle1.DXFont = new DevExpress.Drawing.DXFont("Microsoft YaHei", 18F);
 			chartTitle1.Text = "峰值:0";
-			this.chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
+			chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] { chartTitle1 });
 			// 
 			// xtraOpenFileDialog
 			// 
-			this.xtraOpenFileDialog.FileName = "xtraOpenFileDialog";
-			this.xtraOpenFileDialog.Filter = "数据文件(*.dat)|*.dat";
+			xtraOpenFileDialog.FileName = "xtraOpenFileDialog";
+			xtraOpenFileDialog.Filter = "数据文件(*.dat)|*.dat";
 			// 
 			// parametersView
 			// 
-			this.parametersView.Appearance.BackColor = System.Drawing.Color.White;
-			this.parametersView.Appearance.Options.UseBackColor = true;
-			this.parametersView.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-			this.parametersView.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.parametersView.Location = new System.Drawing.Point(0, 49);
-			this.parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.parametersView.Name = "parametersView";
-			this.parametersView.Size = new System.Drawing.Size(826, 478);
-			this.parametersView.TabIndex = 9;
+			parametersView.Appearance.BackColor = System.Drawing.Color.White;
+			parametersView.Appearance.Options.UseBackColor = true;
+			parametersView.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+			parametersView.Dock = System.Windows.Forms.DockStyle.Fill;
+			parametersView.Location = new System.Drawing.Point(0, 49);
+			parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			parametersView.Name = "parametersView";
+			parametersView.Size = new System.Drawing.Size(826, 478);
+			parametersView.TabIndex = 9;
 			// 
 			// xtraSaveFileDialog
 			// 
-			this.xtraSaveFileDialog.Filter = "pdf|*pdf|xls|*xls|xlsx|*xlsx|docx|*docx";
+			xtraSaveFileDialog.Filter = "pdf|*pdf|xls|*xls|xlsx|*xlsx|docx|*docx";
 			// 
 			// Form
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(826, 550);
-			this.Controls.Add(this.chart);
-			this.Controls.Add(this.parametersView);
-			this.Controls.Add(this.barDockControlLeft);
-			this.Controls.Add(this.barDockControlRight);
-			this.Controls.Add(this.barDockControlBottom);
-			this.Controls.Add(this.barDockControlTop);
-			this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			this.Name = "Form";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "信号量分析";
-			((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
-
+			AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			ClientSize = new System.Drawing.Size(826, 550);
+			Controls.Add(chart);
+			Controls.Add(parametersView);
+			Controls.Add(barDockControlLeft);
+			Controls.Add(barDockControlRight);
+			Controls.Add(barDockControlBottom);
+			Controls.Add(barDockControlTop);
+			Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+			Name = "Form";
+			StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			Text = "信号量分析";
+			((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
+			((System.ComponentModel.ISupportInitialize)xyDiagram1).EndInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)series1).EndInit();
+			((System.ComponentModel.ISupportInitialize)chart).EndInit();
+			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
