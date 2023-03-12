@@ -17,7 +17,7 @@ public partial class Form : DevExpress.XtraEditors.XtraForm
 		InitializeComponent();
 	}
 
-	void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+	void OpenHistoryFile_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 	{
 		if (xtraOpenFileDialog.ShowDialog(this) == DialogResult.OK)
 		{

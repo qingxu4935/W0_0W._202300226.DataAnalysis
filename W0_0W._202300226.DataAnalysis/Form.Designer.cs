@@ -41,7 +41,7 @@
 			Paramters = new DevExpress.XtraBars.BarButtonItem();
 			bar2 = new DevExpress.XtraBars.Bar();
 			barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-			barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			OpenHistoryFile = new DevExpress.XtraBars.BarButtonItem();
 			barSubItem3 = new DevExpress.XtraBars.BarSubItem();
 			barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
 			barSubItem5 = new DevExpress.XtraBars.BarSubItem();
@@ -73,7 +73,7 @@
 			barManager1.DockControls.Add(barDockControlLeft);
 			barManager1.DockControls.Add(barDockControlRight);
 			barManager1.Form = this;
-			barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barSubItem1, barSubItem3, barButtonItem1, barButtonItem5, barButtonItem6, barSubItem5, statusText, Preview, Export, Paramters });
+			barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barSubItem1, barSubItem3, OpenHistoryFile, barButtonItem5, barButtonItem6, barSubItem5, statusText, Preview, Export, Paramters });
 			barManager1.MainMenu = bar2;
 			barManager1.MaxItemId = 20;
 			barManager1.StatusBar = bar3;
@@ -127,16 +127,16 @@
 			barSubItem1.Caption = "数据获取";
 			barSubItem1.Id = 0;
 			barSubItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barSubItem1.ImageOptions.SvgImage");
-			barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
+			barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, OpenHistoryFile, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph) });
 			barSubItem1.Name = "barSubItem1";
 			// 
-			// barButtonItem1
+			// OpenHistoryFile
 			// 
-			barButtonItem1.Caption = "打开历史数据";
-			barButtonItem1.Id = 4;
-			barButtonItem1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
-			barButtonItem1.Name = "barButtonItem1";
-			barButtonItem1.ItemClick += barButtonItem1_ItemClick;
+			OpenHistoryFile.Caption = "打开历史数据";
+			OpenHistoryFile.Id = 4;
+			OpenHistoryFile.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("OpenHistoryFile.ImageOptions.SvgImage");
+			OpenHistoryFile.Name = "OpenHistoryFile";
+			OpenHistoryFile.ItemClick += OpenHistoryFile_ItemClick;
 			// 
 			// barSubItem3
 			// 
@@ -311,7 +311,7 @@
 		private DevExpress.XtraBars.BarDockControl barDockControlRight;
 		private DevExpress.XtraBars.BarSubItem barSubItem1;
 		private DevExpress.XtraBars.BarSubItem barSubItem3;
-		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.BarButtonItem OpenHistoryFile;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem5;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem6;
 		private DevExpress.XtraCharts.ChartControl chart;
