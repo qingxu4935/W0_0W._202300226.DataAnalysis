@@ -5,7 +5,7 @@
 /// </summary>
 sealed class Signal
 {
-	public Signal(double rate, int index, int value)
+	public Signal(double rate, int index, double value)
 	{
 		Index = index;
 		Value = value;
@@ -25,5 +25,5 @@ sealed class Signal
 	/// <summary>
 	/// 信号量
 	/// </summary>
-	public int Value { get; }
+	public double Value { get; }
 }

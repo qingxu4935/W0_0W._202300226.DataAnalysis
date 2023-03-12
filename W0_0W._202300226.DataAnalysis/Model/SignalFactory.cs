@@ -33,7 +33,7 @@ sealed class SignalFactory
 	/// <summary>
 	/// 峰值
 	/// </summary>
-	public int MaxValue { get; private set; }
+	public double MaxValue { get; private set; }
 
 	/// <summary>
 	/// 加载，解析历史数据，并计算峰值
@@ -60,11 +60,13 @@ sealed class SignalFactory
 		var index = 0;
 		//读取采样率
 		var rate = _config.RateValue;
+		//采样率
+		var sensitivityValue = _config.SensitivityValue;
 		//只要没有读到文件的结尾，一直读取并处理
 		while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 		{
 			//按字节读数据
-			var value = binaryReader.ReadByte();
+			var value = binaryReader.ReadByte() * sensitivityValue;
 			// 如果当前点是采样率的倍数，我们就要输出到chart
 			if (index % rate == 0)
 			{

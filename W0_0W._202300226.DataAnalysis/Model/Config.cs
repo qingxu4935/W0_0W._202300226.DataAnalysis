@@ -63,7 +63,7 @@ sealed class Config
 	/// <summary>
 	/// 灵敏度实际计算值
 	/// </summary>
-	public double SensitivityValue => Sensitivity / 100;
+	public double SensitivityValue => Sensitivity / 100d;
 
 	/// <summary>
 	/// 灵敏度, %
