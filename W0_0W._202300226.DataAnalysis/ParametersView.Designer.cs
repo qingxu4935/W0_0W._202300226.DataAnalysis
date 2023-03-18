@@ -38,7 +38,7 @@
 			ValidStartTextEdit = new DevExpress.XtraEditors.TextEdit();
 			SensitivityTextEdit = new DevExpress.XtraEditors.TextEdit();
 			DeviceNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-			layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+			layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
 			layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			ItemForRate = new DevExpress.XtraLayout.LayoutControlItem();
 			simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
@@ -55,7 +55,7 @@
 			((System.ComponentModel.ISupportInitialize)ValidStartTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)SensitivityTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)DeviceNameTextEdit.Properties).BeginInit();
-			((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlGroup).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).BeginInit();
 			((System.ComponentModel.ISupportInitialize)simpleLabelItem1).BeginInit();
@@ -78,8 +78,8 @@
 			dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			dataLayoutControl1.Name = "dataLayoutControl1";
 			dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(751, 1398, 650, 400);
-			dataLayoutControl1.Root = layoutControlGroup1;
-			dataLayoutControl1.Size = new System.Drawing.Size(933, 551);
+			dataLayoutControl1.Root = layoutControlGroup;
+			dataLayoutControl1.Size = new System.Drawing.Size(560, 348);
 			dataLayoutControl1.TabIndex = 0;
 			// 
 			// RateTextEdit
@@ -92,7 +92,7 @@
 			RateTextEdit.Properties.Mask.EditMask = "##0.000";
 			RateTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			RateTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			RateTextEdit.Size = new System.Drawing.Size(699, 20);
+			RateTextEdit.Size = new System.Drawing.Size(376, 20);
 			RateTextEdit.StyleController = dataLayoutControl1;
 			RateTextEdit.TabIndex = 2;
 			// 
@@ -110,7 +110,7 @@
 			ValidStartTextEdit.Properties.Mask.EditMask = "N0";
 			ValidStartTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			ValidStartTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			ValidStartTextEdit.Size = new System.Drawing.Size(825, 20);
+			ValidStartTextEdit.Size = new System.Drawing.Size(452, 20);
 			ValidStartTextEdit.StyleController = dataLayoutControl1;
 			ValidStartTextEdit.TabIndex = 0;
 			// 
@@ -124,7 +124,7 @@
 			SensitivityTextEdit.Properties.Mask.EditMask = "##";
 			SensitivityTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			SensitivityTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			SensitivityTextEdit.Size = new System.Drawing.Size(699, 20);
+			SensitivityTextEdit.Size = new System.Drawing.Size(376, 20);
 			SensitivityTextEdit.StyleController = dataLayoutControl1;
 			SensitivityTextEdit.TabIndex = 3;
 			// 
@@ -133,18 +133,18 @@
 			DeviceNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "DeviceName", true));
 			DeviceNameTextEdit.Location = new System.Drawing.Point(96, 84);
 			DeviceNameTextEdit.Name = "DeviceNameTextEdit";
-			DeviceNameTextEdit.Size = new System.Drawing.Size(825, 20);
+			DeviceNameTextEdit.Size = new System.Drawing.Size(452, 20);
 			DeviceNameTextEdit.StyleController = dataLayoutControl1;
 			DeviceNameTextEdit.TabIndex = 4;
 			// 
-			// layoutControlGroup1
+			// layoutControlGroup
 			// 
-			layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			layoutControlGroup1.GroupBordersVisible = false;
-			layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, ItemForValidStart, layoutControlItem1, simpleLabelItem2 });
-			layoutControlGroup1.Name = "Root";
-			layoutControlGroup1.Size = new System.Drawing.Size(933, 551);
-			layoutControlGroup1.TextVisible = false;
+			layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			layoutControlGroup.GroupBordersVisible = false;
+			layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, ItemForValidStart, layoutControlItem1, simpleLabelItem2 });
+			layoutControlGroup.Name = "layoutControlGroup";
+			layoutControlGroup.Size = new System.Drawing.Size(560, 348);
+			layoutControlGroup.TextVisible = false;
 			// 
 			// layoutControlGroup2
 			// 
@@ -153,23 +153,23 @@
 			layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { ItemForRate, simpleLabelItem1 });
 			layoutControlGroup2.Location = new System.Drawing.Point(0, 24);
 			layoutControlGroup2.Name = "autoGeneratedGroup0";
-			layoutControlGroup2.Size = new System.Drawing.Size(913, 24);
+			layoutControlGroup2.Size = new System.Drawing.Size(540, 24);
 			// 
 			// ItemForRate
 			// 
 			ItemForRate.Control = RateTextEdit;
 			ItemForRate.Location = new System.Drawing.Point(0, 0);
 			ItemForRate.Name = "ItemForRate";
-			ItemForRate.Size = new System.Drawing.Size(787, 24);
+			ItemForRate.Size = new System.Drawing.Size(464, 24);
 			ItemForRate.Text = "采样率";
 			ItemForRate.TextSize = new System.Drawing.Size(72, 14);
 			// 
 			// simpleLabelItem1
 			// 
 			simpleLabelItem1.AllowHotTrack = false;
-			simpleLabelItem1.Location = new System.Drawing.Point(787, 0);
+			simpleLabelItem1.Location = new System.Drawing.Point(464, 0);
 			simpleLabelItem1.Name = "simpleLabelItem1";
-			simpleLabelItem1.Size = new System.Drawing.Size(126, 24);
+			simpleLabelItem1.Size = new System.Drawing.Size(76, 24);
 			simpleLabelItem1.Text = "k/s";
 			simpleLabelItem1.TextSize = new System.Drawing.Size(72, 14);
 			// 
@@ -178,7 +178,7 @@
 			ItemForSensitivity.Control = SensitivityTextEdit;
 			ItemForSensitivity.Location = new System.Drawing.Point(0, 48);
 			ItemForSensitivity.Name = "ItemForSensitivity";
-			ItemForSensitivity.Size = new System.Drawing.Size(787, 24);
+			ItemForSensitivity.Size = new System.Drawing.Size(464, 24);
 			ItemForSensitivity.Text = "灵敏度";
 			ItemForSensitivity.TextSize = new System.Drawing.Size(72, 14);
 			// 
@@ -187,7 +187,7 @@
 			ItemForValidStart.Control = ValidStartTextEdit;
 			ItemForValidStart.Location = new System.Drawing.Point(0, 0);
 			ItemForValidStart.Name = "ItemForValidStart";
-			ItemForValidStart.Size = new System.Drawing.Size(913, 24);
+			ItemForValidStart.Size = new System.Drawing.Size(540, 24);
 			ItemForValidStart.Text = "有效数据起点";
 			ItemForValidStart.TextSize = new System.Drawing.Size(72, 14);
 			// 
@@ -197,16 +197,16 @@
 			layoutControlItem1.CustomizationFormText = "设备号";
 			layoutControlItem1.Location = new System.Drawing.Point(0, 72);
 			layoutControlItem1.Name = "layoutControlItem1";
-			layoutControlItem1.Size = new System.Drawing.Size(913, 459);
+			layoutControlItem1.Size = new System.Drawing.Size(540, 256);
 			layoutControlItem1.Text = "设备号";
 			layoutControlItem1.TextSize = new System.Drawing.Size(72, 14);
 			// 
 			// simpleLabelItem2
 			// 
 			simpleLabelItem2.AllowHotTrack = false;
-			simpleLabelItem2.Location = new System.Drawing.Point(787, 48);
+			simpleLabelItem2.Location = new System.Drawing.Point(464, 48);
 			simpleLabelItem2.Name = "simpleLabelItem2";
-			simpleLabelItem2.Size = new System.Drawing.Size(126, 24);
+			simpleLabelItem2.Size = new System.Drawing.Size(76, 24);
 			simpleLabelItem2.Text = "%";
 			simpleLabelItem2.TextSize = new System.Drawing.Size(72, 14);
 			// 
@@ -225,7 +225,7 @@
 			labelControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			labelControl.Name = "labelControl";
 			labelControl.Padding = new System.Windows.Forms.Padding(12, 5, 0, 0);
-			labelControl.Size = new System.Drawing.Size(933, 30);
+			labelControl.Size = new System.Drawing.Size(560, 30);
 			labelControl.TabIndex = 1;
 			labelControl.Text = "参数";
 			// 
@@ -245,7 +245,7 @@
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseBackColor = true;
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
-			windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(63, 63, 63);
+			windowsUIButtonPanelMain.BackColor = System.Drawing.Color.Black;
 			windowsuiButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled";
 			windowsuiButtonImageOptions2.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
 			windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] { new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存", true, windowsuiButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false), new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存并关闭", true, windowsuiButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false) });
@@ -253,12 +253,12 @@
 			windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
 			windowsUIButtonPanelMain.EnableImageTransparency = true;
 			windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-			windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 581);
+			windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 378);
 			windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5);
 			windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 65);
 			windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 65);
 			windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-			windowsUIButtonPanelMain.Size = new System.Drawing.Size(933, 65);
+			windowsUIButtonPanelMain.Size = new System.Drawing.Size(560, 65);
 			windowsUIButtonPanelMain.TabIndex = 3;
 			windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
 			windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -276,7 +276,7 @@
 			Controls.Add(windowsUIButtonPanelMain);
 			Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			Name = "ParametersView";
-			Size = new System.Drawing.Size(933, 646);
+			Size = new System.Drawing.Size(560, 443);
 			Load += ParametersView_Load;
 			((System.ComponentModel.ISupportInitialize)dataLayoutControl1).EndInit();
 			dataLayoutControl1.ResumeLayout(false);
@@ -285,7 +285,7 @@
 			((System.ComponentModel.ISupportInitialize)ValidStartTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)SensitivityTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)DeviceNameTextEdit.Properties).EndInit();
-			((System.ComponentModel.ISupportInitialize)layoutControlGroup1).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlGroup).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).EndInit();
 			((System.ComponentModel.ISupportInitialize)simpleLabelItem1).EndInit();
@@ -299,7 +299,7 @@
 		#endregion
 
 		private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
 		private DevExpress.XtraEditors.LabelControl labelControl;
 		private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
 		private System.Windows.Forms.BindingSource configBindingSource;

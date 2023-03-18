@@ -54,7 +54,6 @@
 			barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			chart = new DevExpress.XtraCharts.ChartControl();
 			xtraOpenFileDialog = new DevExpress.XtraEditors.XtraOpenFileDialog(components);
-			parametersView = new ParametersView();
 			xtraSaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(components);
 			((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)chart).BeginInit();
@@ -134,7 +133,6 @@
 			// 
 			OpenHistoryFile.Caption = "打开历史数据";
 			OpenHistoryFile.Id = 4;
-			OpenHistoryFile.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("OpenHistoryFile.ImageOptions.SvgImage");
 			OpenHistoryFile.Name = "OpenHistoryFile";
 			OpenHistoryFile.ItemClick += OpenHistoryFile_ItemClick;
 			// 
@@ -259,18 +257,6 @@
 			xtraOpenFileDialog.FileName = "xtraOpenFileDialog";
 			xtraOpenFileDialog.Filter = "数据文件(*.dat)|*.dat";
 			// 
-			// parametersView
-			// 
-			parametersView.Appearance.BackColor = System.Drawing.Color.White;
-			parametersView.Appearance.Options.UseBackColor = true;
-			parametersView.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-			parametersView.Dock = System.Windows.Forms.DockStyle.Fill;
-			parametersView.Location = new System.Drawing.Point(0, 49);
-			parametersView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-			parametersView.Name = "parametersView";
-			parametersView.Size = new System.Drawing.Size(826, 478);
-			parametersView.TabIndex = 9;
-			// 
 			// xtraSaveFileDialog
 			// 
 			xtraSaveFileDialog.Filter = "pdf|*pdf|xls|*xls|xlsx|*xlsx|docx|*docx";
@@ -281,7 +267,6 @@
 			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			ClientSize = new System.Drawing.Size(826, 550);
 			Controls.Add(chart);
-			Controls.Add(parametersView);
 			Controls.Add(barDockControlLeft);
 			Controls.Add(barDockControlRight);
 			Controls.Add(barDockControlBottom);
@@ -316,7 +301,6 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem6;
 		private DevExpress.XtraCharts.ChartControl chart;
 		private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog;
-		private ParametersView parametersView;
 		private DevExpress.XtraBars.BarSubItem barSubItem5;
 		private DevExpress.XtraBars.BarStaticItem statusText;
 		private DevExpress.XtraBars.BarButtonItem Preview;

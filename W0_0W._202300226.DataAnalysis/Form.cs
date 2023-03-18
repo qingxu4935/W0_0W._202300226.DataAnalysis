@@ -3,10 +3,12 @@ using System.IO;
 using System.Reactive.Disposables;
 using System.Windows.Forms;
 using DevExpress.XtraCharts.Printing;
+using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
+using PrintImageFormat = DevExpress.XtraCharts.Printing.PrintImageFormat;
 
 namespace W0_0W._202300226.DataAnalysis;
 
@@ -49,10 +51,6 @@ public partial class Form : DevExpress.XtraEditors.XtraForm
 				chart.Titles[0].Text = $"#{signalFactory.DeviceName} - 峰值: {signalFactory.MaxValue}";
 				//状态栏显示历史文件的路径
 				statusText.Caption = fileName;
-				if (parametersView.Visible)
-				{
-					parametersView.Visible = false;
-				}
 			}
 		}
 	}
@@ -112,8 +110,8 @@ public partial class Form : DevExpress.XtraEditors.XtraForm
 	//打开配置界面
 	void Parameters_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 	{
-		parametersView.Visible = true;
-		parametersView.BringToFront();
+		var parametersView = new ParametersView();
+		XtraDialog.Show(this, parametersView);
 	}
 
 	/// <summary>

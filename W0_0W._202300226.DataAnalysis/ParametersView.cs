@@ -29,7 +29,7 @@ public partial class ParametersView : DevExpress.XtraEditors.XtraUserControl
 				break;
 			case "保存并关闭":
 				_config.Save();
-				Visible = false;
+				ParentForm?.Close();
 				break;
 		}
 	}
