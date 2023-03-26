@@ -20,7 +20,7 @@ sealed class Signal
 	/// <summary>
 	/// 序号
 	/// </summary>
-	public int Index { get; }
+	int Index { get; }
 
 	/// <summary>
 	/// 信号量
