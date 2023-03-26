@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reactive.Disposables;
 using System.Windows.Forms;
@@ -8,11 +9,12 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
+using W0_0W._202300226.DataAnalysis.Model.Filter;
 using PrintImageFormat = DevExpress.XtraCharts.Printing.PrintImageFormat;
 
 namespace W0_0W._202300226.DataAnalysis;
 
-public partial class Form : DevExpress.XtraEditors.XtraForm
+public partial class Form : XtraForm
 {
 	public Form()
 	{
@@ -38,14 +40,10 @@ public partial class Form : DevExpress.XtraEditors.XtraForm
 				//加载数据
 				signalFactory.Load(fileName);
 
-				//获取要配置的series
-				var series = chart.Series[0];
-				//指定series数据源
-				series.DataSource = signalFactory.Signals;
-				//指定x轴数据源
-				series.ArgumentDataMember = nameof(Signal.Second);
-				//指定y轴数据源
-				series.ValueDataMembers[0] = nameof(Signal.Value);
+				SetSeries("信号量", signalFactory.Signals);
+				SetSeries("限幅滤波法", new LimitingSignalFilter(128).Filter(signalFactory.Signals));
+				SetSeries("中位值滤波法", new MedianSignalFilter(3).Filter(signalFactory.Signals));
+				SetSeries("算术平均滤波法", new AverageSignalFilter(10).Filter(signalFactory.Signals));
 
 				//在chart标题中显示设备号和峰值
 				chart.Titles[0].Text = $"#{signalFactory.DeviceName} - 峰值: {signalFactory.MaxValue}";
@@ -53,6 +51,18 @@ public partial class Form : DevExpress.XtraEditors.XtraForm
 				statusText.Caption = fileName;
 			}
 		}
+	}
+
+	void SetSeries(string seriesName, IReadOnlyList<Signal> data)
+	{
+		//获取要配置的series
+		var series = chart.Series[seriesName];
+		//指定series数据源
+		series.DataSource = data;
+		//指定x轴数据源
+		series.ArgumentDataMember = nameof(Signal.Second);
+		//指定y轴数据源
+		series.ValueDataMembers[0] = nameof(Signal.Value);
 	}
 
 	//打印预览

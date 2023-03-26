@@ -33,6 +33,12 @@
 			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
 			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			barManager1 = new DevExpress.XtraBars.BarManager(components);
 			bar1 = new DevExpress.XtraBars.Bar();
@@ -60,6 +66,12 @@
 			((System.ComponentModel.ISupportInitialize)xyDiagram1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)series1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)lineSeriesView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)series2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)series3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)series4).BeginInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView4).BeginInit();
 			SuspendLayout();
 			// 
 			// barManager1
@@ -239,12 +251,19 @@
 			xyDiagram1.EnableAxisYZooming = true;
 			chart.Diagram = xyDiagram1;
 			chart.Dock = System.Windows.Forms.DockStyle.Fill;
-			chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+			chart.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
+			chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
 			chart.Location = new System.Drawing.Point(0, 49);
 			chart.Name = "chart";
 			series1.Name = "信号量";
 			series1.View = lineSeriesView1;
-			chart.SeriesSerializable = (new DevExpress.XtraCharts.Series[] { series1 });
+			series2.Name = "限幅滤波法";
+			series2.View = lineSeriesView2;
+			series3.Name = "中位值滤波法";
+			series3.View = lineSeriesView3;
+			series4.Name = "算术平均滤波法";
+			series4.View = lineSeriesView4;
+			chart.SeriesSerializable = (new DevExpress.XtraCharts.Series[] { series1, series2, series3, series4 });
 			chart.Size = new System.Drawing.Size(826, 478);
 			chart.TabIndex = 4;
 			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
@@ -279,6 +298,12 @@
 			((System.ComponentModel.ISupportInitialize)xyDiagram1).EndInit();
 			((System.ComponentModel.ISupportInitialize)lineSeriesView1).EndInit();
 			((System.ComponentModel.ISupportInitialize)series1).EndInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView2).EndInit();
+			((System.ComponentModel.ISupportInitialize)series2).EndInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView3).EndInit();
+			((System.ComponentModel.ISupportInitialize)series3).EndInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView4).EndInit();
+			((System.ComponentModel.ISupportInitialize)series4).EndInit();
 			((System.ComponentModel.ISupportInitialize)chart).EndInit();
 			ResumeLayout(false);
 			PerformLayout();

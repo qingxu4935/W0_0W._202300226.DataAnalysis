@@ -7,6 +7,7 @@ sealed class Signal
 {
 	public Signal(double rate, int index, double value)
 	{
+		Rate = rate;
 		Index = index;
 		Value = value;
 		Second = Index / rate;
@@ -17,10 +18,12 @@ sealed class Signal
 	/// </summary>
 	public double Second { get; }
 
+	public double Rate { get; }
+
 	/// <summary>
 	/// 序号
 	/// </summary>
-	int Index { get; }
+	public int Index { get; }
 
 	/// <summary>
 	/// 信号量
