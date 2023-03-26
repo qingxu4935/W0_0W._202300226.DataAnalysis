@@ -49,7 +49,6 @@
 			barSubItem1 = new DevExpress.XtraBars.BarSubItem();
 			OpenHistoryFile = new DevExpress.XtraBars.BarButtonItem();
 			barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-			barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
 			barSubItem5 = new DevExpress.XtraBars.BarSubItem();
 			bar3 = new DevExpress.XtraBars.Bar();
 			statusText = new DevExpress.XtraBars.BarStaticItem();
@@ -84,7 +83,7 @@
 			barManager1.DockControls.Add(barDockControlLeft);
 			barManager1.DockControls.Add(barDockControlRight);
 			barManager1.Form = this;
-			barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barSubItem1, barSubItem3, OpenHistoryFile, barButtonItem5, barButtonItem6, barSubItem5, statusText, Preview, Export, Paramters });
+			barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barSubItem1, barSubItem3, OpenHistoryFile, barButtonItem5, barSubItem5, statusText, Preview, Export, Paramters });
 			barManager1.MainMenu = bar2;
 			barManager1.MaxItemId = 20;
 			barManager1.StatusBar = bar3;
@@ -153,14 +152,8 @@
 			barSubItem3.Caption = "数据分析";
 			barSubItem3.Id = 2;
 			barSubItem3.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barSubItem3.ImageOptions.SvgImage");
-			barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barButtonItem6), new DevExpress.XtraBars.LinkPersistInfo(barSubItem5) });
+			barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barSubItem5) });
 			barSubItem3.Name = "barSubItem3";
-			// 
-			// barButtonItem6
-			// 
-			barButtonItem6.Caption = "滤波";
-			barButtonItem6.Id = 9;
-			barButtonItem6.Name = "barButtonItem6";
 			// 
 			// barSubItem5
 			// 
@@ -323,7 +316,6 @@
 		private DevExpress.XtraBars.BarSubItem barSubItem3;
 		private DevExpress.XtraBars.BarButtonItem OpenHistoryFile;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-		private DevExpress.XtraBars.BarButtonItem barButtonItem6;
 		private DevExpress.XtraCharts.ChartControl chart;
 		private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog;
 		private DevExpress.XtraBars.BarSubItem barSubItem5;
