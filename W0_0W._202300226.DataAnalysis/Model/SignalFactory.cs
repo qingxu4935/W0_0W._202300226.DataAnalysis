@@ -66,7 +66,7 @@ sealed class SignalFactory
 		while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 		{
 			//按字节读数据
-			var value = binaryReader.ReadByte() * sensitivityValue;
+			var value = binaryReader.ReadInt16() * sensitivityValue;
 			// 如果当前点是采样率的倍数，我们就要输出到chart
 			if (index % rate == 0)
 			{
