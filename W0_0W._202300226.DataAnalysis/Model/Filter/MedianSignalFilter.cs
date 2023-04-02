@@ -14,10 +14,10 @@ sealed class MedianSignalFilter : SignalFilter
 	/// </summary>
 	readonly int _number;
 
-	public MedianSignalFilter(int number)
+	public MedianSignalFilter(Config config)
 	{
 		//要求采样数最小为3
-		_number = Guard.Against.AgainstExpression(x => x % 2 == 1 && x > 1, number, "采样数为>1的奇数");
+		_number = Guard.Against.AgainstExpression(x => x % 2 == 1 && x > 1, config.MedianSignalFilterNumber, "采样数为>1的奇数");
 	}
 
 	public override IReadOnlyList<Signal> Filter(IReadOnlyList<Signal> data)

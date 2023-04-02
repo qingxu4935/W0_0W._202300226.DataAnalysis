@@ -14,11 +14,11 @@ static class App
 		SplatRegistrations.Register<Config>();
 		SplatRegistrations.Register<SignalFactory>();
 		//注册限幅滤波法
-		Locator.CurrentMutable.Register<SignalFilter>(() => new LimitingSignalFilter(128), nameof(LimitingSignalFilter));
+		SplatRegistrations.Register<SignalFilter, LimitingSignalFilter>("LimitingSignalFilter");
 		//注册中位值滤波法
-		Locator.CurrentMutable.Register<SignalFilter>(() => new MedianSignalFilter(3), nameof(MedianSignalFilter));
+		SplatRegistrations.Register<SignalFilter, MedianSignalFilter>("MedianSignalFilter");
 		//注册算术平均滤波法
-		Locator.CurrentMutable.Register<SignalFilter>(() => new AverageSignalFilter(2), nameof(AverageSignalFilter));
+		SplatRegistrations.Register<SignalFilter, AverageSignalFilter>("AverageSignalFilter");
 		SplatRegistrations.SetupIOC();
 	}
 }

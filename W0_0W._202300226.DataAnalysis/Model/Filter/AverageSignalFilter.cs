@@ -13,10 +13,10 @@ sealed class AverageSignalFilter : SignalFilter
 	//采样数
 	readonly int _number;
 
-	public AverageSignalFilter(int number)
+	public AverageSignalFilter(Config config)
 	{
 		//要求连续采样数至少为2
-		_number = Guard.Against.AgainstExpression(x => x >= 2, number, "采样数至少2");
+		_number = Guard.Against.AgainstExpression(x => x >= 2, config.AverageSignalFilterNumber, "采样数至少2");
 	}
 
 	public override IReadOnlyList<Signal> Filter(IReadOnlyList<Signal> data)

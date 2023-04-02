@@ -16,9 +16,9 @@ sealed class LimitingSignalFilter : SignalFilter
 	/// </summary>
 	readonly double _delta;
 
-	public LimitingSignalFilter(double delta)
+	public LimitingSignalFilter(Config config)
 	{
-		_delta = delta;
+		_delta = config.LimitingSignalFilterDelta;
 	}
 
 	public override IReadOnlyList<Signal> Filter(IReadOnlyList<Signal> data)

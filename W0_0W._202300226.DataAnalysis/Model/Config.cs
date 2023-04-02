@@ -75,6 +75,33 @@ sealed class Config
 	}
 
 	/// <summary>
+	/// 限幅滤波法-最大偏差值
+	/// </summary>
+	public double LimitingSignalFilterDelta
+	{
+		get => double.Parse(Data[nameof(Config)][nameof(LimitingSignalFilterDelta)]);
+		set => Data[nameof(Config)][nameof(LimitingSignalFilterDelta)] = value.ToString(CultureInfo.InvariantCulture);
+	}
+
+	/// <summary>
+	/// 算术平均滤波法-连续采样数
+	/// </summary>
+	public int AverageSignalFilterNumber
+	{
+		get => int.Parse(Data[nameof(Config)][nameof(AverageSignalFilterNumber)]);
+		set => Data[nameof(Config)][nameof(AverageSignalFilterNumber)] = value.ToString();
+	}
+
+	/// <summary>
+	/// 中位值滤波法-连续采样数
+	/// </summary>
+	public int MedianSignalFilterNumber
+	{
+		get => int.Parse(Data[nameof(Config)][nameof(MedianSignalFilterNumber)]);
+		set => Data[nameof(Config)][nameof(MedianSignalFilterNumber)] = value.ToString();
+	}
+
+	/// <summary>
 	/// 保存配置改动
 	/// </summary>
 	public void Save()
