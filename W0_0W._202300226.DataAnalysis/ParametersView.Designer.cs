@@ -38,6 +38,9 @@
 			ValidStartTextEdit = new DevExpress.XtraEditors.TextEdit();
 			SensitivityTextEdit = new DevExpress.XtraEditors.TextEdit();
 			DeviceNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+			LimitingSignalFilterDeltaTextEdit = new DevExpress.XtraEditors.TextEdit();
+			AverageSignalFilterNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+			MedianSignalFilterNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
 			layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
 			layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			ItemForRate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -46,6 +49,9 @@
 			ItemForValidStart = new DevExpress.XtraLayout.LayoutControlItem();
 			layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
+			layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			labelControl = new DevExpress.XtraEditors.LabelControl();
 			windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
 			((System.ComponentModel.ISupportInitialize)dataLayoutControl1).BeginInit();
@@ -55,6 +61,9 @@
 			((System.ComponentModel.ISupportInitialize)ValidStartTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)SensitivityTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)DeviceNameTextEdit.Properties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)LimitingSignalFilterDeltaTextEdit.Properties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)AverageSignalFilterNumberTextEdit.Properties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)MedianSignalFilterNumberTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).BeginInit();
@@ -63,6 +72,9 @@
 			((System.ComponentModel.ISupportInitialize)ItemForValidStart).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)simpleLabelItem2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem4).BeginInit();
 			SuspendLayout();
 			// 
 			// dataLayoutControl1
@@ -72,6 +84,9 @@
 			dataLayoutControl1.Controls.Add(ValidStartTextEdit);
 			dataLayoutControl1.Controls.Add(SensitivityTextEdit);
 			dataLayoutControl1.Controls.Add(DeviceNameTextEdit);
+			dataLayoutControl1.Controls.Add(LimitingSignalFilterDeltaTextEdit);
+			dataLayoutControl1.Controls.Add(AverageSignalFilterNumberTextEdit);
+			dataLayoutControl1.Controls.Add(MedianSignalFilterNumberTextEdit);
 			dataLayoutControl1.DataSource = configBindingSource;
 			dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			dataLayoutControl1.Location = new System.Drawing.Point(0, 30);
@@ -85,14 +100,14 @@
 			// RateTextEdit
 			// 
 			RateTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Rate", true));
-			RateTextEdit.Location = new System.Drawing.Point(96, 36);
+			RateTextEdit.Location = new System.Drawing.Point(172, 36);
 			RateTextEdit.Name = "RateTextEdit";
 			RateTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			RateTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			RateTextEdit.Properties.Mask.EditMask = "##0.000";
 			RateTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			RateTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			RateTextEdit.Size = new System.Drawing.Size(376, 20);
+			RateTextEdit.Size = new System.Drawing.Size(224, 20);
 			RateTextEdit.StyleController = dataLayoutControl1;
 			RateTextEdit.TabIndex = 2;
 			// 
@@ -103,45 +118,87 @@
 			// ValidStartTextEdit
 			// 
 			ValidStartTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "ValidStart", true));
-			ValidStartTextEdit.Location = new System.Drawing.Point(96, 12);
+			ValidStartTextEdit.Location = new System.Drawing.Point(172, 12);
 			ValidStartTextEdit.Name = "ValidStartTextEdit";
 			ValidStartTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			ValidStartTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			ValidStartTextEdit.Properties.Mask.EditMask = "N0";
 			ValidStartTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			ValidStartTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			ValidStartTextEdit.Size = new System.Drawing.Size(452, 20);
+			ValidStartTextEdit.Size = new System.Drawing.Size(376, 20);
 			ValidStartTextEdit.StyleController = dataLayoutControl1;
 			ValidStartTextEdit.TabIndex = 0;
 			// 
 			// SensitivityTextEdit
 			// 
 			SensitivityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Sensitivity", true));
-			SensitivityTextEdit.Location = new System.Drawing.Point(96, 60);
+			SensitivityTextEdit.Location = new System.Drawing.Point(172, 60);
 			SensitivityTextEdit.Name = "SensitivityTextEdit";
 			SensitivityTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			SensitivityTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			SensitivityTextEdit.Properties.Mask.EditMask = "##";
 			SensitivityTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			SensitivityTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			SensitivityTextEdit.Size = new System.Drawing.Size(376, 20);
+			SensitivityTextEdit.Size = new System.Drawing.Size(224, 20);
 			SensitivityTextEdit.StyleController = dataLayoutControl1;
 			SensitivityTextEdit.TabIndex = 3;
 			// 
 			// DeviceNameTextEdit
 			// 
 			DeviceNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "DeviceName", true));
-			DeviceNameTextEdit.Location = new System.Drawing.Point(96, 84);
+			DeviceNameTextEdit.Location = new System.Drawing.Point(172, 84);
 			DeviceNameTextEdit.Name = "DeviceNameTextEdit";
-			DeviceNameTextEdit.Size = new System.Drawing.Size(452, 20);
+			DeviceNameTextEdit.Size = new System.Drawing.Size(376, 20);
 			DeviceNameTextEdit.StyleController = dataLayoutControl1;
 			DeviceNameTextEdit.TabIndex = 4;
+			// 
+			// LimitingSignalFilterDeltaTextEdit
+			// 
+			LimitingSignalFilterDeltaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "LimitingSignalFilterDelta", true));
+			LimitingSignalFilterDeltaTextEdit.Location = new System.Drawing.Point(172, 108);
+			LimitingSignalFilterDeltaTextEdit.Name = "LimitingSignalFilterDeltaTextEdit";
+			LimitingSignalFilterDeltaTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+			LimitingSignalFilterDeltaTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			LimitingSignalFilterDeltaTextEdit.Properties.Mask.EditMask = "N0";
+			LimitingSignalFilterDeltaTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			LimitingSignalFilterDeltaTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+			LimitingSignalFilterDeltaTextEdit.Size = new System.Drawing.Size(376, 20);
+			LimitingSignalFilterDeltaTextEdit.StyleController = dataLayoutControl1;
+			LimitingSignalFilterDeltaTextEdit.TabIndex = 5;
+			// 
+			// AverageSignalFilterNumberTextEdit
+			// 
+			AverageSignalFilterNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "AverageSignalFilterNumber", true));
+			AverageSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 132);
+			AverageSignalFilterNumberTextEdit.Name = "AverageSignalFilterNumberTextEdit";
+			AverageSignalFilterNumberTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+			AverageSignalFilterNumberTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			AverageSignalFilterNumberTextEdit.Properties.Mask.EditMask = "N0";
+			AverageSignalFilterNumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			AverageSignalFilterNumberTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+			AverageSignalFilterNumberTextEdit.Size = new System.Drawing.Size(376, 20);
+			AverageSignalFilterNumberTextEdit.StyleController = dataLayoutControl1;
+			AverageSignalFilterNumberTextEdit.TabIndex = 6;
+			// 
+			// MedianSignalFilterNumberTextEdit
+			// 
+			MedianSignalFilterNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "MedianSignalFilterNumber", true));
+			MedianSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 156);
+			MedianSignalFilterNumberTextEdit.Name = "MedianSignalFilterNumberTextEdit";
+			MedianSignalFilterNumberTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+			MedianSignalFilterNumberTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			MedianSignalFilterNumberTextEdit.Properties.Mask.EditMask = "N0";
+			MedianSignalFilterNumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			MedianSignalFilterNumberTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+			MedianSignalFilterNumberTextEdit.Size = new System.Drawing.Size(376, 20);
+			MedianSignalFilterNumberTextEdit.StyleController = dataLayoutControl1;
+			MedianSignalFilterNumberTextEdit.TabIndex = 7;
 			// 
 			// layoutControlGroup
 			// 
 			layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
 			layoutControlGroup.GroupBordersVisible = false;
-			layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, ItemForValidStart, layoutControlItem1, simpleLabelItem2 });
+			layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, ItemForValidStart, layoutControlItem1, simpleLabelItem2, layoutControlItem2, layoutControlItem3, layoutControlItem4 });
 			layoutControlGroup.Name = "layoutControlGroup";
 			layoutControlGroup.Size = new System.Drawing.Size(560, 348);
 			layoutControlGroup.TextVisible = false;
@@ -160,27 +217,27 @@
 			ItemForRate.Control = RateTextEdit;
 			ItemForRate.Location = new System.Drawing.Point(0, 0);
 			ItemForRate.Name = "ItemForRate";
-			ItemForRate.Size = new System.Drawing.Size(464, 24);
+			ItemForRate.Size = new System.Drawing.Size(388, 24);
 			ItemForRate.Text = "采样率";
-			ItemForRate.TextSize = new System.Drawing.Size(72, 14);
+			ItemForRate.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// simpleLabelItem1
 			// 
 			simpleLabelItem1.AllowHotTrack = false;
-			simpleLabelItem1.Location = new System.Drawing.Point(464, 0);
+			simpleLabelItem1.Location = new System.Drawing.Point(388, 0);
 			simpleLabelItem1.Name = "simpleLabelItem1";
-			simpleLabelItem1.Size = new System.Drawing.Size(76, 24);
+			simpleLabelItem1.Size = new System.Drawing.Size(152, 24);
 			simpleLabelItem1.Text = "k/s";
-			simpleLabelItem1.TextSize = new System.Drawing.Size(72, 14);
+			simpleLabelItem1.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// ItemForSensitivity
 			// 
 			ItemForSensitivity.Control = SensitivityTextEdit;
 			ItemForSensitivity.Location = new System.Drawing.Point(0, 48);
 			ItemForSensitivity.Name = "ItemForSensitivity";
-			ItemForSensitivity.Size = new System.Drawing.Size(464, 24);
+			ItemForSensitivity.Size = new System.Drawing.Size(388, 24);
 			ItemForSensitivity.Text = "灵敏度";
-			ItemForSensitivity.TextSize = new System.Drawing.Size(72, 14);
+			ItemForSensitivity.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// ItemForValidStart
 			// 
@@ -189,7 +246,7 @@
 			ItemForValidStart.Name = "ItemForValidStart";
 			ItemForValidStart.Size = new System.Drawing.Size(540, 24);
 			ItemForValidStart.Text = "有效数据起点";
-			ItemForValidStart.TextSize = new System.Drawing.Size(72, 14);
+			ItemForValidStart.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// layoutControlItem1
 			// 
@@ -197,18 +254,45 @@
 			layoutControlItem1.CustomizationFormText = "设备号";
 			layoutControlItem1.Location = new System.Drawing.Point(0, 72);
 			layoutControlItem1.Name = "layoutControlItem1";
-			layoutControlItem1.Size = new System.Drawing.Size(540, 256);
+			layoutControlItem1.Size = new System.Drawing.Size(540, 24);
 			layoutControlItem1.Text = "设备号";
-			layoutControlItem1.TextSize = new System.Drawing.Size(72, 14);
+			layoutControlItem1.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// simpleLabelItem2
 			// 
 			simpleLabelItem2.AllowHotTrack = false;
-			simpleLabelItem2.Location = new System.Drawing.Point(464, 48);
+			simpleLabelItem2.Location = new System.Drawing.Point(388, 48);
 			simpleLabelItem2.Name = "simpleLabelItem2";
-			simpleLabelItem2.Size = new System.Drawing.Size(76, 24);
+			simpleLabelItem2.Size = new System.Drawing.Size(152, 24);
 			simpleLabelItem2.Text = "%";
-			simpleLabelItem2.TextSize = new System.Drawing.Size(72, 14);
+			simpleLabelItem2.TextSize = new System.Drawing.Size(148, 14);
+			// 
+			// layoutControlItem2
+			// 
+			layoutControlItem2.Control = LimitingSignalFilterDeltaTextEdit;
+			layoutControlItem2.Location = new System.Drawing.Point(0, 96);
+			layoutControlItem2.Name = "layoutControlItem2";
+			layoutControlItem2.Size = new System.Drawing.Size(540, 24);
+			layoutControlItem2.Text = "限幅滤波法-最大偏差值";
+			layoutControlItem2.TextSize = new System.Drawing.Size(148, 14);
+			// 
+			// layoutControlItem3
+			// 
+			layoutControlItem3.Control = AverageSignalFilterNumberTextEdit;
+			layoutControlItem3.Location = new System.Drawing.Point(0, 120);
+			layoutControlItem3.Name = "layoutControlItem3";
+			layoutControlItem3.Size = new System.Drawing.Size(540, 24);
+			layoutControlItem3.Text = "算术平均滤波法-连续采样数";
+			layoutControlItem3.TextSize = new System.Drawing.Size(148, 14);
+			// 
+			// layoutControlItem4
+			// 
+			layoutControlItem4.Control = MedianSignalFilterNumberTextEdit;
+			layoutControlItem4.Location = new System.Drawing.Point(0, 144);
+			layoutControlItem4.Name = "layoutControlItem4";
+			layoutControlItem4.Size = new System.Drawing.Size(540, 184);
+			layoutControlItem4.Text = "中位值滤波法-连续采样数";
+			layoutControlItem4.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// labelControl
 			// 
@@ -285,6 +369,9 @@
 			((System.ComponentModel.ISupportInitialize)ValidStartTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)SensitivityTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)DeviceNameTextEdit.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)LimitingSignalFilterDeltaTextEdit.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)AverageSignalFilterNumberTextEdit.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)MedianSignalFilterNumberTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).EndInit();
@@ -293,6 +380,9 @@
 			((System.ComponentModel.ISupportInitialize)ItemForValidStart).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
 			((System.ComponentModel.ISupportInitialize)simpleLabelItem2).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem2).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem3).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem4).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -314,5 +404,11 @@
 		private DevExpress.XtraEditors.TextEdit DeviceNameTextEdit;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 		private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+		private DevExpress.XtraEditors.TextEdit LimitingSignalFilterDeltaTextEdit;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+		private DevExpress.XtraEditors.TextEdit AverageSignalFilterNumberTextEdit;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+		private DevExpress.XtraEditors.TextEdit MedianSignalFilterNumberTextEdit;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
 	}
 }
