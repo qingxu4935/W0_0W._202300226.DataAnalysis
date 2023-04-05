@@ -190,6 +190,9 @@
 			xyDiagram1.EnableAxisYZooming = true;
 			chart.Diagram = xyDiagram1;
 			chart.Dock = System.Windows.Forms.DockStyle.Fill;
+			chart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
+			chart.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+			chart.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
 			chart.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
 			chart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
 			chart.Location = new System.Drawing.Point(0, 24);
