@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using Ardalis.GuardClauses;
+using Splat;
+using W0_0W._202300226.DataAnalysis.Model.Filter;
 
 namespace W0_0W._202300226.DataAnalysis.Model;
 
@@ -24,6 +26,12 @@ sealed class SignalFactory
 	/// 信号量结果list（只读）
 	/// </summary>
 	public IReadOnlyList<Signal> Signals => _signals.AsReadOnly();
+
+	public IReadOnlyList<Signal> LimitingSignalFilterResult { get; private set; }
+
+	public IReadOnlyList<Signal> MedianSignalFilterResult { get; private set; }
+
+	public IReadOnlyList<Signal> AverageSignalFilterResult { get; private set; }
 
 	/// <summary>
 	/// 设备号
@@ -88,5 +96,9 @@ sealed class SignalFactory
 			//计数器+1
 			index++;
 		}
+
+		LimitingSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(LimitingSignalFilter)).Filter(Signals);
+		MedianSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(MedianSignalFilter)).Filter(Signals);
+		AverageSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(AverageSignalFilter)).Filter(Signals);
 	}
 }

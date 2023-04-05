@@ -10,7 +10,6 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
-using W0_0W._202300226.DataAnalysis.Model.Filter;
 using PrintImageFormat = DevExpress.XtraCharts.Printing.PrintImageFormat;
 
 namespace W0_0W._202300226.DataAnalysis;
@@ -43,9 +42,9 @@ public partial class Form : XtraForm
 				signalFactory.Load(fileName);
 
 				SetSeries("信号量", signalFactory.Signals);
-				SetSeries("限幅滤波法", Locator.Current.GetService<SignalFilter>(nameof(LimitingSignalFilter)).Filter(signalFactory.Signals));
-				SetSeries("中位值滤波法", Locator.Current.GetService<SignalFilter>(nameof(MedianSignalFilter)).Filter(signalFactory.Signals));
-				SetSeries("算术平均滤波法", Locator.Current.GetService<SignalFilter>(nameof(AverageSignalFilter)).Filter(signalFactory.Signals));
+				SetSeries("限幅滤波法", signalFactory.LimitingSignalFilterResult);
+				SetSeries("中位值滤波法", signalFactory.MedianSignalFilterResult);
+				SetSeries("算术平均滤波法", signalFactory.AverageSignalFilterResult);
 
 				//在chart标题中显示设备号和峰值
 				chart.Titles[0].Text = $"#{signalFactory.DeviceName} - 峰值: {signalFactory.MaxValue}";
