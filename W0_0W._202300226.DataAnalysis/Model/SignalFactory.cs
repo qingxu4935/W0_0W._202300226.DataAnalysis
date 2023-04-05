@@ -27,11 +27,20 @@ sealed class SignalFactory
 	/// </summary>
 	public IReadOnlyList<Signal> Signals => _signals.AsReadOnly();
 
-	public IReadOnlyList<Signal> LimitingSignalFilterResult { get; private set; }
+	/// <summary>
+	/// 限幅滤波法 结果
+	/// </summary>
+	public IReadOnlyList<Signal> LimitingSignalFilterResult { get; private set; } = new List<Signal>();
 
-	public IReadOnlyList<Signal> MedianSignalFilterResult { get; private set; }
+	/// <summary>
+	/// 中位值滤波法 结果
+	/// </summary>
+	public IReadOnlyList<Signal> MedianSignalFilterResult { get; private set; } = new List<Signal>();
 
-	public IReadOnlyList<Signal> AverageSignalFilterResult { get; private set; }
+	/// <summary>
+	/// 算术平均滤波法 结果
+	/// </summary>
+	public IReadOnlyList<Signal> AverageSignalFilterResult { get; private set; } = new List<Signal>();
 
 	/// <summary>
 	/// 设备号
@@ -97,6 +106,7 @@ sealed class SignalFactory
 			index++;
 		}
 
+		//滤波
 		LimitingSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(LimitingSignalFilter)).Filter(Signals);
 		MedianSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(MedianSignalFilter)).Filter(Signals);
 		AverageSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(AverageSignalFilter)).Filter(Signals);
