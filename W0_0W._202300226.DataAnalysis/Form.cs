@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using DevExpress.XtraCharts.Printing;
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using Splat;
 using W0_0W._202300226.DataAnalysis.Model;
@@ -21,6 +22,7 @@ public partial class Form : XtraForm
 		InitializeComponent();
 	}
 
+	SignalFactory signalFactory;
 	/// <summary>
 	/// 打开历史数据
 	/// </summary>
@@ -36,7 +38,7 @@ public partial class Form : XtraForm
 			using (ShowProgress())
 			{
 				//获取一个信号量工厂
-				var signalFactory = Locator.Current.GetService<SignalFactory>();
+				signalFactory = Locator.Current.GetService<SignalFactory>();
 				//加载数据
 				signalFactory.Load(fileName);
 
@@ -68,7 +70,10 @@ public partial class Form : XtraForm
 	//打印预览
 	void Preview_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 	{
-		chart.ShowPrintPreview();
+		var report = new Report();
+		report.objectDataSource1.DataSource = signalFactory;
+		report.ShowPreviewDialog();
+		//chart.ShowPrintPreview();
 	}
 
 	//导出

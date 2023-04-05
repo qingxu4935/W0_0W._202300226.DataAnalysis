@@ -13,6 +13,10 @@
 		<None Update="Configuration.ini">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+		<None Update="Properties\Settings.settings">
+		  <Generator>SettingsSingleFileGenerator</Generator>
+		  <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="ini-parser-netstandard" Version="2.5.2" />
@@ -41,6 +45,13 @@
 	</ItemGroup>
 	<ItemGroup>
 		<zh_CN Include="$(SolutionDir)\zh-CN\**\*.*" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Copy SourceFiles="@(zh_CN)" DestinationFolder="$(TargetDir)zh-CN\%(RecursiveDir)" SkipUnchangedFiles="true" />

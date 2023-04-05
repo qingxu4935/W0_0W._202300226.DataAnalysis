@@ -15,7 +15,7 @@ sealed class SignalFactory
 	//内部使用的信号量list
 	readonly List<Signal> _signals = new();
 
-	public SignalFactory(Config config)
+	public SignalFactory(Config config = null)
 	{
 		_config = Guard.Against.Null(config, nameof(config));
 	}
@@ -29,6 +29,16 @@ sealed class SignalFactory
 	/// 设备号
 	/// </summary>
 	public string DeviceName => _config.DeviceName;
+
+	/// <summary>
+	/// 测试人员
+	/// </summary>
+	public string TesterName => "王二三";
+
+	/// <summary>
+	/// 测试日期
+	/// </summary>
+	public DateTime TestTime => DateTime.Now;
 
 	/// <summary>
 	/// 峰值
