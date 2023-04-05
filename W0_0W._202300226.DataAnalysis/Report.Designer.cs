@@ -260,6 +260,9 @@ partial class Report
 			this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.objectDataSource1});
 			this.DataSource = this.objectDataSource1;
+			this.ExportOptions.PrintPreview.DefaultExportFormat = DevExpress.XtraPrinting.PrintingSystemCommand.ExportDocx;
+			this.ExportOptions.PrintPreview.DefaultFileName = "测试报告";
+			this.ExportOptions.PrintPreview.DefaultSendFormat = DevExpress.XtraPrinting.PrintingSystemCommand.SendDocx;
 			this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
 			this.Version = "22.2";
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
