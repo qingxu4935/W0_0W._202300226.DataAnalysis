@@ -106,9 +106,11 @@ sealed class SignalFactory
 			index++;
 		}
 
-		//滤波
+		//限幅滤波
 		LimitingSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(LimitingSignalFilter)).Filter(Signals);
+		//中位值滤波
 		MedianSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(MedianSignalFilter)).Filter(Signals);
+		//算术平均滤波
 		AverageSignalFilterResult = Locator.Current.GetService<SignalFilter>(nameof(AverageSignalFilter)).Filter(Signals);
 	}
 }
