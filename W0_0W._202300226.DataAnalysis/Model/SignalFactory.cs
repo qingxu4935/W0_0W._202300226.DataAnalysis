@@ -41,12 +41,12 @@ sealed class SignalFactory
 	/// <summary>
 	/// 测试人员
 	/// </summary>
-	public string TesterName => "王二三";
+	public string TesterName => _config.TesterName;
 
 	/// <summary>
 	/// 测试日期
 	/// </summary>
-	public DateTime TestTime => DateTime.Now;
+	public DateTime TestTime => _config.TestTime;
 
 	/// <summary>
 	/// 峰值

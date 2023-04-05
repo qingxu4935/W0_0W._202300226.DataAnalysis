@@ -102,6 +102,24 @@ sealed class Config
 	}
 
 	/// <summary>
+	/// 测试人员
+	/// </summary>
+	public string TesterName
+	{
+		get => Data[nameof(Config)][nameof(TesterName)];
+		set => Data[nameof(Config)][nameof(TesterName)] = value;
+	}
+
+	/// <summary>
+	/// 测试日期
+	/// </summary>
+	public DateTime TestTime
+	{
+		get => DateTime.Parse(Data[nameof(Config)][nameof(TestTime)]);
+		set => Data[nameof(Config)][nameof(TestTime)] = value.ToShortDateString();
+	}
+
+	/// <summary>
 	/// 保存配置改动
 	/// </summary>
 	public void Save()
