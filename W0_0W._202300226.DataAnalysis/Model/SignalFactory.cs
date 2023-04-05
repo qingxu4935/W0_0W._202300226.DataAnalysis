@@ -17,7 +17,7 @@ sealed class SignalFactory
 
 	public SignalFactory(Config config)
 	{
-		_config = config;
+		_config = Guard.Against.Null(config, nameof(config));
 	}
 
 	/// <summary>

@@ -15,6 +15,7 @@ sealed class AverageSignalFilter : SignalFilter
 
 	public AverageSignalFilter(Config config)
 	{
+		Guard.Against.Null(config, nameof(config));
 		//要求连续采样数至少为2
 		_number = Guard.Against.AgainstExpression(x => x >= 2, config.AverageSignalFilterNumber, "采样数至少2");
 	}

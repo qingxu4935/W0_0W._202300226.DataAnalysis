@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Ardalis.GuardClauses;
 
 namespace W0_0W._202300226.DataAnalysis.Model.Filter;
 
@@ -18,6 +19,7 @@ sealed class LimitingSignalFilter : SignalFilter
 
 	public LimitingSignalFilter(Config config)
 	{
+		Guard.Against.Null(config, nameof(config));
 		_delta = config.LimitingSignalFilterDelta;
 	}
 

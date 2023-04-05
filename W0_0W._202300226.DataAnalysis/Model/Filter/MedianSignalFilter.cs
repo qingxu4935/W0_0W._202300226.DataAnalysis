@@ -16,6 +16,7 @@ sealed class MedianSignalFilter : SignalFilter
 
 	public MedianSignalFilter(Config config)
 	{
+		Guard.Against.Null(config, nameof(config));
 		//要求采样数最小为3
 		_number = Guard.Against.AgainstExpression(x => x % 2 == 1 && x > 1, config.MedianSignalFilterNumber, "采样数为>1的奇数");
 	}
