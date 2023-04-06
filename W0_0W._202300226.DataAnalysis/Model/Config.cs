@@ -52,6 +52,24 @@ sealed class Config
 	}
 
 	/// <summary>
+	/// 峰值对应的信号量
+	/// </summary>
+	public double Max
+	{
+		get => double.Parse(Data[nameof(Config)][nameof(Max)]);
+		set => Data[nameof(Config)][nameof(Max)] = value.ToString(CultureInfo.InvariantCulture);
+	}
+
+	/// <summary>
+	/// 谷值对应的信号量
+	/// </summary>
+	public double Min
+	{
+		get => double.Parse(Data[nameof(Config)][nameof(Min)]);
+		set => Data[nameof(Config)][nameof(Min)] = value.ToString(CultureInfo.InvariantCulture);
+	}
+
+	/// <summary>
 	/// 有效起始点
 	/// </summary>
 	public int ValidStart
