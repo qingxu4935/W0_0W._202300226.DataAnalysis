@@ -39,6 +39,8 @@
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
 			barManager1 = new DevExpress.XtraBars.BarManager(components);
 			bar1 = new DevExpress.XtraBars.Bar();
@@ -64,6 +66,8 @@
 			((System.ComponentModel.ISupportInitialize)lineSeriesView3).BeginInit();
 			((System.ComponentModel.ISupportInitialize)series4).BeginInit();
 			((System.ComponentModel.ISupportInitialize)lineSeriesView4).BeginInit();
+			((System.ComponentModel.ISupportInitialize)series5).BeginInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView5).BeginInit();
 			SuspendLayout();
 			// 
 			// barManager1
@@ -199,13 +203,15 @@
 			chart.Name = "chart";
 			series1.Name = "信号量";
 			series1.View = lineSeriesView1;
-			series2.Name = "限幅滤波法";
+			series2.Name = "定标";
 			series2.View = lineSeriesView2;
-			series3.Name = "中位值滤波法";
+			series3.Name = "限幅滤波法";
 			series3.View = lineSeriesView3;
-			series4.Name = "算术平均滤波法";
+			series4.Name = "中位值滤波法";
 			series4.View = lineSeriesView4;
-			chart.SeriesSerializable = (new DevExpress.XtraCharts.Series[] { series1, series2, series3, series4 });
+			series5.Name = "算术平均滤波法";
+			series5.View = lineSeriesView5;
+			chart.SeriesSerializable = (new DevExpress.XtraCharts.Series[] { series1, series2, series3, series4, series5 });
 			chart.Size = new System.Drawing.Size(826, 503);
 			chart.TabIndex = 4;
 			chartTitle1.Alignment = System.Drawing.StringAlignment.Near;
@@ -242,6 +248,8 @@
 			((System.ComponentModel.ISupportInitialize)series3).EndInit();
 			((System.ComponentModel.ISupportInitialize)lineSeriesView4).EndInit();
 			((System.ComponentModel.ISupportInitialize)series4).EndInit();
+			((System.ComponentModel.ISupportInitialize)lineSeriesView5).EndInit();
+			((System.ComponentModel.ISupportInitialize)series5).EndInit();
 			((System.ComponentModel.ISupportInitialize)chart).EndInit();
 			ResumeLayout(false);
 			PerformLayout();

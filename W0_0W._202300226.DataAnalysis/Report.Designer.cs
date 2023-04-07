@@ -38,6 +38,8 @@ partial class Report
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
 			DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
 			this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -65,6 +67,8 @@ partial class Report
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
 			// 
@@ -110,26 +114,32 @@ partial class Report
 			series1.Name = "信号量";
 			series1.ValueDataMembersSerializable = "Signals.Value";
 			series1.View = lineSeriesView1;
-			series2.ArgumentDataMember = "LimitingSignalFilterResult.Second";
+			series2.ArgumentDataMember = "CalibratedResult.Second";
 			series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series2.Name = "限幅滤波法";
-			series2.ValueDataMembersSerializable = "LimitingSignalFilterResult.Value";
+			series2.Name = "定标";
+			series2.ValueDataMembersSerializable = "CalibratedResult.Value";
 			series2.View = lineSeriesView2;
-			series3.ArgumentDataMember = "MedianSignalFilterResult.Second";
+			series3.ArgumentDataMember = "LimitingSignalFilterResult.Second";
 			series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series3.Name = "中位值滤波法";
-			series3.ValueDataMembersSerializable = "Signals.Value";
+			series3.Name = "限幅滤波法";
+			series3.ValueDataMembersSerializable = "LimitingSignalFilterResult.Value";
 			series3.View = lineSeriesView3;
-			series4.ArgumentDataMember = "AverageSignalFilterResult.Second";
+			series4.ArgumentDataMember = "MedianSignalFilterResult.Second";
 			series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series4.Name = "算术平均滤波法";
-			series4.ValueDataMembersSerializable = "AverageSignalFilterResult.Value";
+			series4.Name = "中位值滤波法";
+			series4.ValueDataMembersSerializable = "Signals.Value";
 			series4.View = lineSeriesView4;
+			series5.ArgumentDataMember = "AverageSignalFilterResult.Second";
+			series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series5.Name = "算术平均滤波法";
+			series5.ValueDataMembersSerializable = "AverageSignalFilterResult.Value";
+			series5.View = lineSeriesView5;
 			this.xrChart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
         series3,
-        series4};
+        series4,
+        series5};
 			this.xrChart1.SizeF = new System.Drawing.SizeF(650F, 372.9167F);
 			// 
 			// ReportHeader
@@ -274,6 +284,8 @@ partial class Report
 			((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this)).EndInit();

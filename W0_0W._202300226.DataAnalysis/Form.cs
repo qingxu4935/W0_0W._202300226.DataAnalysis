@@ -38,6 +38,7 @@ public partial class Form : XtraForm
 				_signalFactory.Load(fileName);
 
 				SetSeries("信号量", _signalFactory.Signals);
+				SetSeries("定标", _signalFactory.CalibratedResult);
 				SetSeries("限幅滤波法", _signalFactory.LimitingSignalFilterResult);
 				SetSeries("中位值滤波法", _signalFactory.MedianSignalFilterResult);
 				SetSeries("算术平均滤波法", _signalFactory.AverageSignalFilterResult);
