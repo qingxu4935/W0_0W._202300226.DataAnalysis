@@ -52,7 +52,7 @@ sealed class Config
 	}
 
 	/// <summary>
-	/// 峰值对应的信号量
+	/// 峰值对应的物理量
 	/// </summary>
 	public double Max
 	{
@@ -61,7 +61,7 @@ sealed class Config
 	}
 
 	/// <summary>
-	/// 谷值对应的信号量
+	/// 谷值对应的物理量
 	/// </summary>
 	public double Min
 	{

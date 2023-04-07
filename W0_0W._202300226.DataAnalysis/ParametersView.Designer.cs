@@ -30,8 +30,8 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
-			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
 			RateTextEdit = new DevExpress.XtraEditors.TextEdit();
 			configBindingSource = new System.Windows.Forms.BindingSource(components);
@@ -43,6 +43,7 @@
 			MedianSignalFilterNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
 			TesterNameTextEdit = new DevExpress.XtraEditors.TextEdit();
 			dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+			textEdit1 = new DevExpress.XtraEditors.TextEdit();
 			layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
 			layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			ItemForRate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -56,8 +57,11 @@
 			ItemForValidStart = new DevExpress.XtraLayout.LayoutControlItem();
 			layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			labelControl = new DevExpress.XtraEditors.LabelControl();
 			windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+			textEdit2 = new DevExpress.XtraEditors.TextEdit();
+			layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)dataLayoutControl1).BeginInit();
 			dataLayoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)RateTextEdit.Properties).BeginInit();
@@ -71,6 +75,7 @@
 			((System.ComponentModel.ISupportInitialize)TesterNameTextEdit.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties.CalendarTimeProperties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).BeginInit();
@@ -84,6 +89,9 @@
 			((System.ComponentModel.ISupportInitialize)ItemForValidStart).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem5).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem6).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem7).BeginInit();
+			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem8).BeginInit();
 			SuspendLayout();
 			// 
 			// dataLayoutControl1
@@ -98,12 +106,14 @@
 			dataLayoutControl1.Controls.Add(MedianSignalFilterNumberTextEdit);
 			dataLayoutControl1.Controls.Add(TesterNameTextEdit);
 			dataLayoutControl1.Controls.Add(dateEdit1);
+			dataLayoutControl1.Controls.Add(textEdit1);
+			dataLayoutControl1.Controls.Add(textEdit2);
 			dataLayoutControl1.DataSource = configBindingSource;
 			dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			dataLayoutControl1.Location = new System.Drawing.Point(0, 30);
 			dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			dataLayoutControl1.Name = "dataLayoutControl1";
-			dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(350, 1268, 1021, 595);
+			dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(171, 3, 1021, 595);
 			dataLayoutControl1.Root = layoutControlGroup;
 			dataLayoutControl1.Size = new System.Drawing.Size(560, 348);
 			dataLayoutControl1.TabIndex = 0;
@@ -118,7 +128,7 @@
 			RateTextEdit.Properties.Mask.EditMask = "##0.000";
 			RateTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			RateTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			RateTextEdit.Size = new System.Drawing.Size(224, 20);
+			RateTextEdit.Size = new System.Drawing.Size(216, 20);
 			RateTextEdit.StyleController = dataLayoutControl1;
 			RateTextEdit.TabIndex = 2;
 			// 
@@ -150,7 +160,7 @@
 			SensitivityTextEdit.Properties.Mask.EditMask = "##";
 			SensitivityTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 			SensitivityTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-			SensitivityTextEdit.Size = new System.Drawing.Size(224, 20);
+			SensitivityTextEdit.Size = new System.Drawing.Size(216, 20);
 			SensitivityTextEdit.StyleController = dataLayoutControl1;
 			SensitivityTextEdit.TabIndex = 3;
 			// 
@@ -166,7 +176,7 @@
 			// LimitingSignalFilterDeltaTextEdit
 			// 
 			LimitingSignalFilterDeltaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "LimitingSignalFilterDelta", true));
-			LimitingSignalFilterDeltaTextEdit.Location = new System.Drawing.Point(172, 108);
+			LimitingSignalFilterDeltaTextEdit.Location = new System.Drawing.Point(172, 156);
 			LimitingSignalFilterDeltaTextEdit.Name = "LimitingSignalFilterDeltaTextEdit";
 			LimitingSignalFilterDeltaTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			LimitingSignalFilterDeltaTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -180,7 +190,7 @@
 			// AverageSignalFilterNumberTextEdit
 			// 
 			AverageSignalFilterNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "AverageSignalFilterNumber", true));
-			AverageSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 132);
+			AverageSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 180);
 			AverageSignalFilterNumberTextEdit.Name = "AverageSignalFilterNumberTextEdit";
 			AverageSignalFilterNumberTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			AverageSignalFilterNumberTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -194,7 +204,7 @@
 			// MedianSignalFilterNumberTextEdit
 			// 
 			MedianSignalFilterNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "MedianSignalFilterNumber", true));
-			MedianSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 156);
+			MedianSignalFilterNumberTextEdit.Location = new System.Drawing.Point(172, 204);
 			MedianSignalFilterNumberTextEdit.Name = "MedianSignalFilterNumberTextEdit";
 			MedianSignalFilterNumberTextEdit.Properties.Appearance.Options.UseTextOptions = true;
 			MedianSignalFilterNumberTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -208,7 +218,7 @@
 			// TesterNameTextEdit
 			// 
 			TesterNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "TesterName", true));
-			TesterNameTextEdit.Location = new System.Drawing.Point(172, 180);
+			TesterNameTextEdit.Location = new System.Drawing.Point(172, 228);
 			TesterNameTextEdit.Name = "TesterNameTextEdit";
 			TesterNameTextEdit.Size = new System.Drawing.Size(376, 20);
 			TesterNameTextEdit.StyleController = dataLayoutControl1;
@@ -218,7 +228,7 @@
 			// 
 			dateEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "TestTime", true));
 			dateEdit1.EditValue = null;
-			dateEdit1.Location = new System.Drawing.Point(172, 204);
+			dateEdit1.Location = new System.Drawing.Point(172, 252);
 			dateEdit1.Name = "dateEdit1";
 			dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
 			dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
@@ -226,11 +236,25 @@
 			dateEdit1.StyleController = dataLayoutControl1;
 			dateEdit1.TabIndex = 9;
 			// 
+			// textEdit1
+			// 
+			textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Max", true));
+			textEdit1.Location = new System.Drawing.Point(172, 108);
+			textEdit1.Name = "textEdit1";
+			textEdit1.Properties.Appearance.Options.UseTextOptions = true;
+			textEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			textEdit1.Properties.Mask.EditMask = "#####0.00";
+			textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
+			textEdit1.Size = new System.Drawing.Size(376, 20);
+			textEdit1.StyleController = dataLayoutControl1;
+			textEdit1.TabIndex = 10;
+			// 
 			// layoutControlGroup
 			// 
 			layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
 			layoutControlGroup.GroupBordersVisible = false;
-			layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, layoutControlItem1, simpleLabelItem2, layoutControlItem2, layoutControlItem3, layoutControlItem4, ItemForValidStart, layoutControlItem5, layoutControlItem6 });
+			layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup2, ItemForSensitivity, layoutControlItem1, simpleLabelItem2, layoutControlItem2, layoutControlItem3, layoutControlItem4, ItemForValidStart, layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem8 });
 			layoutControlGroup.Name = "Root";
 			layoutControlGroup.Size = new System.Drawing.Size(560, 348);
 			layoutControlGroup.TextVisible = false;
@@ -249,16 +273,16 @@
 			ItemForRate.Control = RateTextEdit;
 			ItemForRate.Location = new System.Drawing.Point(0, 0);
 			ItemForRate.Name = "ItemForRate";
-			ItemForRate.Size = new System.Drawing.Size(388, 24);
+			ItemForRate.Size = new System.Drawing.Size(380, 24);
 			ItemForRate.Text = "采样率";
 			ItemForRate.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// simpleLabelItem1
 			// 
 			simpleLabelItem1.AllowHotTrack = false;
-			simpleLabelItem1.Location = new System.Drawing.Point(388, 0);
+			simpleLabelItem1.Location = new System.Drawing.Point(380, 0);
 			simpleLabelItem1.Name = "simpleLabelItem1";
-			simpleLabelItem1.Size = new System.Drawing.Size(152, 24);
+			simpleLabelItem1.Size = new System.Drawing.Size(160, 24);
 			simpleLabelItem1.Text = "k/s";
 			simpleLabelItem1.TextSize = new System.Drawing.Size(148, 14);
 			// 
@@ -267,7 +291,7 @@
 			ItemForSensitivity.Control = SensitivityTextEdit;
 			ItemForSensitivity.Location = new System.Drawing.Point(0, 48);
 			ItemForSensitivity.Name = "ItemForSensitivity";
-			ItemForSensitivity.Size = new System.Drawing.Size(388, 24);
+			ItemForSensitivity.Size = new System.Drawing.Size(380, 24);
 			ItemForSensitivity.Text = "灵敏度";
 			ItemForSensitivity.TextSize = new System.Drawing.Size(148, 14);
 			// 
@@ -284,16 +308,16 @@
 			// simpleLabelItem2
 			// 
 			simpleLabelItem2.AllowHotTrack = false;
-			simpleLabelItem2.Location = new System.Drawing.Point(388, 48);
+			simpleLabelItem2.Location = new System.Drawing.Point(380, 48);
 			simpleLabelItem2.Name = "simpleLabelItem2";
-			simpleLabelItem2.Size = new System.Drawing.Size(152, 24);
+			simpleLabelItem2.Size = new System.Drawing.Size(160, 24);
 			simpleLabelItem2.Text = "%";
 			simpleLabelItem2.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// layoutControlItem2
 			// 
 			layoutControlItem2.Control = LimitingSignalFilterDeltaTextEdit;
-			layoutControlItem2.Location = new System.Drawing.Point(0, 96);
+			layoutControlItem2.Location = new System.Drawing.Point(0, 144);
 			layoutControlItem2.Name = "layoutControlItem2";
 			layoutControlItem2.Size = new System.Drawing.Size(540, 24);
 			layoutControlItem2.Text = "限幅滤波法-最大偏差值";
@@ -302,7 +326,7 @@
 			// layoutControlItem3
 			// 
 			layoutControlItem3.Control = AverageSignalFilterNumberTextEdit;
-			layoutControlItem3.Location = new System.Drawing.Point(0, 120);
+			layoutControlItem3.Location = new System.Drawing.Point(0, 168);
 			layoutControlItem3.Name = "layoutControlItem3";
 			layoutControlItem3.Size = new System.Drawing.Size(540, 24);
 			layoutControlItem3.Text = "算术平均滤波法-连续采样数";
@@ -311,7 +335,7 @@
 			// layoutControlItem4
 			// 
 			layoutControlItem4.Control = MedianSignalFilterNumberTextEdit;
-			layoutControlItem4.Location = new System.Drawing.Point(0, 144);
+			layoutControlItem4.Location = new System.Drawing.Point(0, 192);
 			layoutControlItem4.Name = "layoutControlItem4";
 			layoutControlItem4.Size = new System.Drawing.Size(540, 24);
 			layoutControlItem4.Text = "中位值滤波法-连续采样数";
@@ -329,7 +353,7 @@
 			// layoutControlItem5
 			// 
 			layoutControlItem5.Control = TesterNameTextEdit;
-			layoutControlItem5.Location = new System.Drawing.Point(0, 168);
+			layoutControlItem5.Location = new System.Drawing.Point(0, 216);
 			layoutControlItem5.Name = "layoutControlItem5";
 			layoutControlItem5.Size = new System.Drawing.Size(540, 24);
 			layoutControlItem5.Text = "测试人员";
@@ -338,11 +362,20 @@
 			// layoutControlItem6
 			// 
 			layoutControlItem6.Control = dateEdit1;
-			layoutControlItem6.Location = new System.Drawing.Point(0, 192);
+			layoutControlItem6.Location = new System.Drawing.Point(0, 240);
 			layoutControlItem6.Name = "layoutControlItem6";
-			layoutControlItem6.Size = new System.Drawing.Size(540, 136);
+			layoutControlItem6.Size = new System.Drawing.Size(540, 88);
 			layoutControlItem6.Text = "测试日期";
 			layoutControlItem6.TextSize = new System.Drawing.Size(148, 14);
+			// 
+			// layoutControlItem7
+			// 
+			layoutControlItem7.Control = textEdit1;
+			layoutControlItem7.Location = new System.Drawing.Point(0, 96);
+			layoutControlItem7.Name = "layoutControlItem7";
+			layoutControlItem7.Size = new System.Drawing.Size(540, 24);
+			layoutControlItem7.Text = "峰值对应的物理量";
+			layoutControlItem7.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// labelControl
 			// 
@@ -380,9 +413,9 @@
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
 			windowsUIButtonPanelMain.BackColor = System.Drawing.Color.Black;
-			windowsuiButtonImageOptions3.ImageUri.Uri = "Save;Size32x32;GrayScaled";
-			windowsuiButtonImageOptions4.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
-			windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] { new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存", true, windowsuiButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false), new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存并关闭", true, windowsuiButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false) });
+			windowsuiButtonImageOptions7.ImageUri.Uri = "Save;Size32x32;GrayScaled";
+			windowsuiButtonImageOptions8.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
+			windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] { new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存", true, windowsuiButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false), new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存并关闭", true, windowsuiButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false) });
 			windowsUIButtonPanelMain.ContentAlignment = System.Drawing.ContentAlignment.MiddleRight;
 			windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
 			windowsUIButtonPanelMain.EnableImageTransparency = true;
@@ -397,6 +430,29 @@
 			windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
 			windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
 			windowsUIButtonPanelMain.ButtonClick += windowsUIButtonPanelMain_ButtonClick;
+			// 
+			// textEdit2
+			// 
+			textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Min", true));
+			textEdit2.Location = new System.Drawing.Point(172, 132);
+			textEdit2.Name = "textEdit2";
+			textEdit2.Properties.Appearance.Options.UseTextOptions = true;
+			textEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			textEdit2.Properties.Mask.EditMask = "#####0.00";
+			textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			textEdit2.Properties.Mask.UseMaskAsDisplayFormat = true;
+			textEdit2.Size = new System.Drawing.Size(376, 20);
+			textEdit2.StyleController = dataLayoutControl1;
+			textEdit2.TabIndex = 11;
+			// 
+			// layoutControlItem8
+			// 
+			layoutControlItem8.Control = textEdit2;
+			layoutControlItem8.Location = new System.Drawing.Point(0, 120);
+			layoutControlItem8.Name = "layoutControlItem8";
+			layoutControlItem8.Size = new System.Drawing.Size(540, 24);
+			layoutControlItem8.Text = "谷值对应的物理量";
+			layoutControlItem8.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// ParametersView
 			// 
@@ -425,6 +481,7 @@
 			((System.ComponentModel.ISupportInitialize)TesterNameTextEdit.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties.CalendarTimeProperties).EndInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).EndInit();
@@ -438,6 +495,9 @@
 			((System.ComponentModel.ISupportInitialize)ItemForValidStart).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem5).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem6).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem7).EndInit();
+			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)layoutControlItem8).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -469,5 +529,9 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
 		private DevExpress.XtraEditors.DateEdit dateEdit1;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+		private DevExpress.XtraEditors.TextEdit textEdit1;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+		private DevExpress.XtraEditors.TextEdit textEdit2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
 	}
 }

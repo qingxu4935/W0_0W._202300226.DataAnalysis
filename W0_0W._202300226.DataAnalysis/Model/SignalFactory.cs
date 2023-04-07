@@ -133,12 +133,16 @@ sealed class SignalFactory
 	/// </summary>
 	void Calibrate()
 	{
-		var actualMax = _config.Max;
-		var actualMin = _config.Min;
-		var k = (actualMax - actualMin) / (MaxValue - MinValue);
-		var b = actualMax - k * MaxValue;
+		var delta = MaxValue - MinValue;
+		if (delta != 0d)
+		{
+			var actualMax = _config.Max;
+			var actualMin = _config.Min;
+			var k = (actualMax - actualMin) / delta;
+			var b = actualMax - k * MaxValue;
 
-		CalibratedResult = Signals.Select(x => new Signal(x.Rate, x.Index, k * x.Value + b)).ToList();
+			CalibratedResult = Signals.Select(x => new Signal(x.Rate, x.Index, k * x.Value + b)).ToList();
+		}
 	}
 
 	void Filter()
