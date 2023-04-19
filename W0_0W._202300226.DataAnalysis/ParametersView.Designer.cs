@@ -30,8 +30,8 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
-			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsuiButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
 			RateTextEdit = new DevExpress.XtraEditors.TextEdit();
 			configBindingSource = new System.Windows.Forms.BindingSource(components);
@@ -44,6 +44,7 @@
 			TesterNameTextEdit = new DevExpress.XtraEditors.TextEdit();
 			dateEdit1 = new DevExpress.XtraEditors.DateEdit();
 			textEdit1 = new DevExpress.XtraEditors.TextEdit();
+			textEdit2 = new DevExpress.XtraEditors.TextEdit();
 			layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
 			layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			ItemForRate = new DevExpress.XtraLayout.LayoutControlItem();
@@ -58,10 +59,9 @@
 			layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+			layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			labelControl = new DevExpress.XtraEditors.LabelControl();
 			windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-			textEdit2 = new DevExpress.XtraEditors.TextEdit();
-			layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)dataLayoutControl1).BeginInit();
 			dataLayoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)RateTextEdit.Properties).BeginInit();
@@ -76,6 +76,7 @@
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties.CalendarTimeProperties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
+			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).BeginInit();
@@ -90,7 +91,6 @@
 			((System.ComponentModel.ISupportInitialize)layoutControlItem5).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem6).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem7).BeginInit();
-			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).BeginInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem8).BeginInit();
 			SuspendLayout();
 			// 
@@ -250,6 +250,20 @@
 			textEdit1.StyleController = dataLayoutControl1;
 			textEdit1.TabIndex = 10;
 			// 
+			// textEdit2
+			// 
+			textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Min", true));
+			textEdit2.Location = new System.Drawing.Point(172, 132);
+			textEdit2.Name = "textEdit2";
+			textEdit2.Properties.Appearance.Options.UseTextOptions = true;
+			textEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			textEdit2.Properties.Mask.EditMask = "#####0.00";
+			textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+			textEdit2.Properties.Mask.UseMaskAsDisplayFormat = true;
+			textEdit2.Size = new System.Drawing.Size(376, 20);
+			textEdit2.StyleController = dataLayoutControl1;
+			textEdit2.TabIndex = 11;
+			// 
 			// layoutControlGroup
 			// 
 			layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -377,6 +391,15 @@
 			layoutControlItem7.Text = "峰值对应的物理量";
 			layoutControlItem7.TextSize = new System.Drawing.Size(148, 14);
 			// 
+			// layoutControlItem8
+			// 
+			layoutControlItem8.Control = textEdit2;
+			layoutControlItem8.Location = new System.Drawing.Point(0, 120);
+			layoutControlItem8.Name = "layoutControlItem8";
+			layoutControlItem8.Size = new System.Drawing.Size(540, 24);
+			layoutControlItem8.Text = "谷值对应的物理量";
+			layoutControlItem8.TextSize = new System.Drawing.Size(148, 14);
+			// 
 			// labelControl
 			// 
 			labelControl.AllowHtmlString = true;
@@ -413,9 +436,9 @@
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
 			windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
 			windowsUIButtonPanelMain.BackColor = System.Drawing.Color.Black;
-			windowsuiButtonImageOptions7.ImageUri.Uri = "Save;Size32x32;GrayScaled";
-			windowsuiButtonImageOptions8.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
-			windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] { new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存", true, windowsuiButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false), new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存并关闭", true, windowsuiButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false) });
+			windowsuiButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled";
+			windowsuiButtonImageOptions2.ImageUri.Uri = "SaveAndClose;Size32x32;GrayScaled";
+			windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] { new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存", true, windowsuiButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false), new DevExpress.XtraBars.Docking2010.WindowsUIButton("保存并关闭", true, windowsuiButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false) });
 			windowsUIButtonPanelMain.ContentAlignment = System.Drawing.ContentAlignment.MiddleRight;
 			windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
 			windowsUIButtonPanelMain.EnableImageTransparency = true;
@@ -430,29 +453,6 @@
 			windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
 			windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
 			windowsUIButtonPanelMain.ButtonClick += windowsUIButtonPanelMain_ButtonClick;
-			// 
-			// textEdit2
-			// 
-			textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", configBindingSource, "Min", true));
-			textEdit2.Location = new System.Drawing.Point(172, 132);
-			textEdit2.Name = "textEdit2";
-			textEdit2.Properties.Appearance.Options.UseTextOptions = true;
-			textEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			textEdit2.Properties.Mask.EditMask = "#####0.00";
-			textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-			textEdit2.Properties.Mask.UseMaskAsDisplayFormat = true;
-			textEdit2.Size = new System.Drawing.Size(376, 20);
-			textEdit2.StyleController = dataLayoutControl1;
-			textEdit2.TabIndex = 11;
-			// 
-			// layoutControlItem8
-			// 
-			layoutControlItem8.Control = textEdit2;
-			layoutControlItem8.Location = new System.Drawing.Point(0, 120);
-			layoutControlItem8.Name = "layoutControlItem8";
-			layoutControlItem8.Size = new System.Drawing.Size(540, 24);
-			layoutControlItem8.Text = "谷值对应的物理量";
-			layoutControlItem8.TextSize = new System.Drawing.Size(148, 14);
 			// 
 			// ParametersView
 			// 
@@ -482,6 +482,7 @@
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties.CalendarTimeProperties).EndInit();
 			((System.ComponentModel.ISupportInitialize)dateEdit1.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
+			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
 			((System.ComponentModel.ISupportInitialize)ItemForRate).EndInit();
@@ -496,7 +497,6 @@
 			((System.ComponentModel.ISupportInitialize)layoutControlItem5).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem6).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem7).EndInit();
-			((System.ComponentModel.ISupportInitialize)textEdit2.Properties).EndInit();
 			((System.ComponentModel.ISupportInitialize)layoutControlItem8).EndInit();
 			ResumeLayout(false);
 		}

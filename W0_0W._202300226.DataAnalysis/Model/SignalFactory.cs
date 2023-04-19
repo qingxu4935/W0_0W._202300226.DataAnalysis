@@ -110,8 +110,10 @@ sealed class SignalFactory
 		//只要没有读到文件的结尾，一直读取并处理
 		while (binaryReader.BaseStream.Position != binaryReader.BaseStream.Length)
 		{
-			//按字节读数据
-			var value = binaryReader.ReadUInt16() * sensitivityValue;
+			//https://stackoverflow.com/questions/20351360/get-lower-bits-of-a-double-in-c-sharp
+			var bits = binaryReader.ReadBytes(2);
+			var _12bit = ((bits[0] & 0x0F) << 8) | (bits[1] & 0xff);
+			var value = _12bit * sensitivityValue;
 			// 如果当前点是采样率的倍数，我们就要输出到chart
 			if (index % rate == 0)
 			{
