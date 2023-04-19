@@ -38,6 +38,7 @@ partial class Report
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+			DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
 			DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
 			DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
 			DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
@@ -45,6 +46,7 @@ partial class Report
 			this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
 			this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
 			this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+			this.xrChart2 = new DevExpress.XtraReports.UI.XRChart();
 			this.xrChart1 = new DevExpress.XtraReports.UI.XRChart();
 			this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
 			this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -57,7 +59,7 @@ partial class Report
 			this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
 			this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
 			this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.xrChart2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
@@ -67,6 +69,8 @@ partial class Report
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -83,14 +87,15 @@ partial class Report
 			// Detail
 			// 
 			this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrChart2,
             this.xrChart1});
-			this.Detail.HeightF = 372.9167F;
+			this.Detail.HeightF = 435.4167F;
 			this.Detail.Name = "Detail";
 			// 
-			// xrChart1
+			// xrChart2
 			// 
-			this.xrChart1.BorderColor = System.Drawing.Color.Black;
-			this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+			this.xrChart2.BorderColor = System.Drawing.Color.Black;
+			this.xrChart2.Borders = DevExpress.XtraPrinting.BorderSide.None;
 			xyDiagram1.AxisX.Label.TextPattern = "{A}s";
 			xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
 			xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
@@ -103,44 +108,74 @@ partial class Report
 			xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
 			xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
 			xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-			this.xrChart1.Diagram = xyDiagram1;
+			this.xrChart2.Diagram = xyDiagram1;
+			this.xrChart2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
+			this.xrChart2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+			this.xrChart2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+			this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.0417F);
+			this.xrChart2.Name = "xrChart2";
+			series1.ArgumentDataMember = "CalibratedResult.Second";
+			series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series1.Name = "定标";
+			series1.ValueDataMembersSerializable = "CalibratedResult.Value";
+			lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series1.View = lineSeriesView1;
+			series2.ArgumentDataMember = "LimitingSignalFilterResult.Second";
+			series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series2.Name = "限幅滤波法";
+			series2.ValueDataMembersSerializable = "LimitingSignalFilterResult.Value";
+			lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series2.View = lineSeriesView2;
+			series3.ArgumentDataMember = "MedianSignalFilterResult.Second";
+			series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series3.Name = "中位值滤波法";
+			series3.ValueDataMembersSerializable = "Signals.Value";
+			lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series3.View = lineSeriesView3;
+			series4.ArgumentDataMember = "AverageSignalFilterResult.Second";
+			series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series4.Name = "算术平均滤波法";
+			series4.ValueDataMembersSerializable = "AverageSignalFilterResult.Value";
+			lineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
+			series4.View = lineSeriesView4;
+			this.xrChart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1,
+        series2,
+        series3,
+        series4};
+			this.xrChart2.SizeF = new System.Drawing.SizeF(650F, 259.375F);
+			// 
+			// xrChart1
+			// 
+			this.xrChart1.BorderColor = System.Drawing.Color.Black;
+			this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+			xyDiagram2.AxisX.Label.TextPattern = "{A}s";
+			xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+			xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+			xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram2.AxisX.WholeRange.AutoSideMargins = false;
+			xyDiagram2.AxisX.WholeRange.EndSideMargin = 0D;
+			xyDiagram2.AxisX.WholeRange.StartSideMargin = 0D;
+			xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+			xyDiagram2.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
+			xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
+			this.xrChart1.Diagram = xyDiagram2;
 			this.xrChart1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
 			this.xrChart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
 			this.xrChart1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
 			this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
 			this.xrChart1.Name = "xrChart1";
-			series1.ArgumentDataMember = "Signals.Second";
-			series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series1.Name = "信号量";
-			series1.ValueDataMembersSerializable = "Signals.Value";
-			series1.View = lineSeriesView1;
-			series2.ArgumentDataMember = "CalibratedResult.Second";
-			series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series2.Name = "定标";
-			series2.ValueDataMembersSerializable = "CalibratedResult.Value";
-			series2.View = lineSeriesView2;
-			series3.ArgumentDataMember = "LimitingSignalFilterResult.Second";
-			series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series3.Name = "限幅滤波法";
-			series3.ValueDataMembersSerializable = "LimitingSignalFilterResult.Value";
-			series3.View = lineSeriesView3;
-			series4.ArgumentDataMember = "MedianSignalFilterResult.Second";
-			series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series4.Name = "中位值滤波法";
-			series4.ValueDataMembersSerializable = "Signals.Value";
-			series4.View = lineSeriesView4;
-			series5.ArgumentDataMember = "AverageSignalFilterResult.Second";
+			series5.ArgumentDataMember = "Signals.Second";
 			series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-			series5.Name = "算术平均滤波法";
-			series5.ValueDataMembersSerializable = "AverageSignalFilterResult.Value";
+			series5.Name = "信号量";
+			series5.ValueDataMembersSerializable = "Signals.Value";
+			lineSeriesView5.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
 			series5.View = lineSeriesView5;
 			this.xrChart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2,
-        series3,
-        series4,
         series5};
-			this.xrChart1.SizeF = new System.Drawing.SizeF(650F, 372.9167F);
+			this.xrChart1.SizeF = new System.Drawing.SizeF(650F, 176.0417F);
 			// 
 			// ReportHeader
 			// 
@@ -284,6 +319,8 @@ partial class Report
 			((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.xrChart2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.xrChart1)).EndInit();
@@ -309,4 +346,5 @@ partial class Report
 	private DevExpress.XtraReports.UI.XRLabel xrLabel8;
 	private DevExpress.XtraReports.UI.XRLabel xrLabel7;
 	private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+	private DevExpress.XtraReports.UI.XRChart xrChart2;
 }

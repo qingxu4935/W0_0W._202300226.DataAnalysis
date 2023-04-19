@@ -70,9 +70,12 @@ public partial class Form : XtraForm
 	{
 		if (_signalFactory != null)
 		{
-			var report = new Report();
-			report.objectDataSource1.DataSource = _signalFactory;
-			report.ShowPreviewDialog();
+			using (ShowProgress())
+			{
+				var report = new Report();
+				report.objectDataSource1.DataSource = _signalFactory;
+				report.ShowPreviewDialog();
+			}
 		}
 	}
 
