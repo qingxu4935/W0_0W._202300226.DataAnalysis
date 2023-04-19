@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Reactive.Disposables;
 using System.Windows.Forms;
+using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
@@ -37,24 +38,25 @@ public partial class Form : XtraForm
 				//加载数据
 				_signalFactory.Load(fileName);
 
-				SetSeries("信号量", _signalFactory.Signals);
-				SetSeries("定标", _signalFactory.CalibratedResult);
-				SetSeries("限幅滤波法", _signalFactory.LimitingSignalFilterResult);
-				SetSeries("中位值滤波法", _signalFactory.MedianSignalFilterResult);
-				SetSeries("算术平均滤波法", _signalFactory.AverageSignalFilterResult);
+				SetSeries(dataChart, "信号量", _signalFactory.Signals);
+
+				SetSeries(analysisChart, "定标", _signalFactory.CalibratedResult);
+				SetSeries(analysisChart, "限幅滤波法", _signalFactory.LimitingSignalFilterResult);
+				SetSeries(analysisChart, "中位值滤波法", _signalFactory.MedianSignalFilterResult);
+				SetSeries(analysisChart, "算术平均滤波法", _signalFactory.AverageSignalFilterResult);
 
 				//在chart标题中显示设备号和峰值
-				chart.Titles[0].Text = $"#{_signalFactory.DeviceName} - 峰值: {_signalFactory.MaxValue}";
+				dataChart.Titles[0].Text = $"设备#{_signalFactory.DeviceName} - 峰值: {_signalFactory.MaxValue:N}, 谷值：{_signalFactory.MinValue:N}";
 				//状态栏显示历史文件的路径
 				statusText.Caption = fileName;
 			}
 		}
 	}
 
-	void SetSeries(string seriesName, IReadOnlyList<Signal> data)
+	static void SetSeries(ChartControl chartControl, string seriesName, IReadOnlyList<Signal> data)
 	{
 		//获取要配置的series
-		var series = chart.Series[seriesName];
+		var series = chartControl.Series[seriesName];
 		//指定series数据源
 		series.DataSource = data;
 		//指定x轴数据源
